@@ -43,13 +43,13 @@ span {
     --fs-title3: 24px;
     --fs-title4: 18px;
     --fs-text: 16px;
-    --fs-small: 14px; 
+    --fs-small: 14px;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -65,27 +65,31 @@ span {
     cursor: pointer;
     transition: background-color 0.25s ease, transform 0.25s ease;
 }
+
 .btn-primary-proviservers:hover {
-  background-color: #0052cc; 
-  transform: translateY(-1px);
+    background-color: #0052cc;
+    transform: translateY(-1px);
 }
-.btn-secondary-proviservers{
-      background-color: var(--white-color);
-  color: var(--primary-color);
-  font-family: var(--font-text);
-  font-size: var(--fs-text);
-  font-weight: 600;
-  border: 2px solid var(--primary-color);
-  border-radius: 8px;
-  padding: 12px 24px;
-  cursor: pointer;
-  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+
+.btn-secondary-proviservers {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    font-family: var(--font-text);
+    font-size: var(--fs-text);
+    font-weight: 600;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
+
 .btn-secondary-proviservers:hover {
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  transform: translateY(-1px);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transform: translateY(-1px);
 }
+
 /* 5.Desktop */
 
 /* dashboard.css - Estilos para el dashboard usando las variables del proyecto */
@@ -124,17 +128,21 @@ body {
     height: auto;
 }
 
-.menu-principal, .menu-secundario {
+.menu-principal,
+.menu-secundario {
     padding: 0 25px;
     margin-bottom: 25px;
 }
 
-.menu-principal ul, .menu-secundario ul {
+.menu-principal ul,
+.menu-secundario ul {
     list-style: none;
     padding: 0;
 }
 
-.menu-principal li, .menu-secundario li {
+.menu-principal a,
+.menu-secundario a {
+    text-decoration: none;
     padding: 14px 18px;
     margin-bottom: 6px;
     border-radius: 8px;
@@ -147,7 +155,30 @@ body {
     color: var(--dark-color);
 }
 
-.menu-principal li:hover, .menu-secundario li:hover {
+.menu-principal a:hover,
+.menu-secundario a:hover {
+    background-color: var(--primary-color);
+    transform: translateX(5px);
+    color: var(--white-color);
+}
+
+
+.menu-principal li,
+.menu-secundario li {
+    padding: 14px 18px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    font-size: var(--fs-text);
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.menu-principal li:hover,
+.menu-secundario li:hover {
     background-color: var(--primary-color);
     transform: translateX(5px);
     color: var(--white-color);
@@ -216,7 +247,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
-    border: 1px solid #e2e8f0;  
+    border: 1px solid #e2e8f0;
 }
 
 .buscador {
@@ -335,6 +366,7 @@ body {
 /* 5. Sección Título Principal */
 #titulo-principal {
     margin-bottom: 30px;
+    border-bottom: 1px solid #9e9e9e;
 }
 
 #titulo-principal h1 {
@@ -420,7 +452,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.tarjeta h2, .tarjeta h3 {
+.tarjeta h2,
+.tarjeta h3 {
     font-size: var(--fs-title4);
     margin-bottom: 20px;
     color: var(--dark-color);
@@ -428,7 +461,8 @@ body {
     font-weight: 600;
 }
 
-#chart-usuarios, #chart-nuevos-servicios {
+#chart-usuarios,
+#chart-nuevos-servicios {
     height: 160px;
     background-color: #f8fafc;
     border-radius: 8px;
@@ -491,27 +525,27 @@ body {
     color: #94a3b8;
     font-style: italic;
 }
-    
+
 /* 9. Responsive Tablet */
 @media screen and (min-width:768px) and (max-width:1080px) {
     .sidebar {
         width: 240px;
     }
-    
+
     #tarjetas-inferiores {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .barra-superior {
         flex-direction: column;
         gap: 15px;
         padding: 15px 20px;
     }
-    
+
     .buscador {
         width: 100%;
     }
-    
+
     .acciones-barra {
         width: 100%;
         justify-content: space-between;
@@ -523,46 +557,46 @@ body {
     body {
         flex-direction: column;
     }
-    
+
     .sidebar {
         width: 100%;
         height: auto;
         padding: 15px 0;
     }
-    
+
     .contenido {
         padding: 15px;
     }
-    
+
     .barra-superior {
         flex-direction: column;
         gap: 15px;
         padding: 15px;
     }
-    
+
     .buscador {
         width: 100%;
     }
-    
+
     .acciones-barra {
         width: 100%;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 10px;
     }
-    
+
     #tarjetas-inferiores {
         grid-template-columns: 1fr;
     }
-    
+
     #titulo-principal h1 {
         font-size: var(--fs-title2);
     }
-    
+
     #grafica-principal {
         padding: 20px;
     }
-    
+
     #periodo {
         position: static;
         margin-bottom: 15px;

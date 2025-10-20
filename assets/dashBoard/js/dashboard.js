@@ -6,7 +6,7 @@ var options = {
     height: 350,
     toolbar: { show: false }
   },
-  colors: ['#1E6FFF', '#333333'], // Azul y gris oscuro
+  colors: ['#0066ff', '#0e1116'], // Azul y gris oscuro
   dataLabels: { enabled: false },
   stroke: { curve: 'smooth' },
   series: [

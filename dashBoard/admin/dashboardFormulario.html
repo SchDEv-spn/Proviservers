@@ -10,10 +10,10 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- css de estilos globales o generales -->
-    <link rel="stylesheet" href="../assets/estilosGenerales/style.css">
+    <link rel="stylesheet" href="../../assets/estilosGenerales/style.css">
 
     <!-- tu css -->
-    <link rel="stylesheet" href="../../assets/dashBoard/css/dashboardTable.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/css/dashboardFormulario.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
             <ul>
                 <a href="dashboardAdmin.html">Dashboard</a>
                 <li>Usuarios</li>
-                <a href="dashboardTabla.html" class="active">Servicios</a>
+                <a href="dashboardTabla.html">Servicios</a>
                 <li>Categorías de Servicios</li>
                 <li>Reportes</li>
                 <li>Estadísticas</li>
@@ -42,7 +42,7 @@
                 <li>Calendario</li>
                 <li>Facturación</li>
                 <li>Marketing</li>
-                <li>Integraciones</li>
+                <a href="dashboardFormulario.html" class="active">Integraciones</a>
             </ul>
         </nav>
 
@@ -91,195 +91,75 @@
         <!--     Secciones -->
         <!-- titulo -->
         <section id="titulo-principal">
-            <h1>Servicios</h1>
+            <h1>Agregar Administradores</h1>
         </section>
 
-        <!-- Tabla arriba -->
-        <section id="tabla-arriba">
-            <table id="tabla-1" class="display nowrap">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Usuario/Proveedor</th>
-                        <th>Dirección</th>
-                        <th>Fecha</th>
-                        <th>Servicio</th>
-                        <th>Estado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>00001</td>
-                        <td>Christine Brooks(Cliente)</td>
-                        <td>089 Kutch Green Apt. 448</td>
-                        <td>14 Febrero 2025</td>
-                        <td>Plomeria</td>
-                        <td><span class="status-badge status-completed">Completado</span></td>
-                    </tr>
-                    <tr>
-                        <td>00002</td>
-                        <td>Christine Brooks(Cliente)</td>
-                        <td>089 Kutch Green Apt. 448</td>
-                        <td>14 Febrero 2025</td>
-                        <td>Plomeria</td>
-                        <td><span class="status-badge status-in-progress">En proceso</span></td>
-                    </tr>
-                    <tr>
-                        <td>00003</td>
-                        <td>Christine Brooks(Cliente)</td>
-                        <td>089 Kutch Green Apt. 448</td>
-                        <td>14 Febrero 2025</td>
-                        <td>Plomeria</td>
-                        <td><span class="status-badge status-pending">Pendiente</span></td>
-                    </tr>
-                    <tr>
-                        <td>00004</td>
-                        <td>Christine Brooks(Cliente)</td>
-                        <td>089 Kutch Green Apt. 448</td>
-                        <td>14 Febrero 2025</td>
-                        <td>Plomeria</td>
-                        <td><span class="status-badge status-completed">Completado</span></td>
-                    </tr>
-                    <tr>
-                        <td>00005</td>
-                        <td>Christine Brooks(Cliente)</td>
-                        <td>089 Kutch Green Apt. 448</td>
-                        <td>14 Febrero 2025</td>
-                        <td>Plomeria</td>
-                        <td><span class="status-badge status-pending">Pendiente</span></td>
-                    </tr>
-                    <tr>
-                        <td>00006</td>
-                        <td>Christine Brooks(Cliente)</td>
-                        <td>089 Kutch Green Apt. 448</td>
-                        <td>14 Febrero 2025</td>
-                        <td>Plomeria</td>
-                        <td><span class="status-badge status-pending">Pendiente</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <!-- Formualior admin -->
+        <section id="formulario">
+            <!-- foto admin -->
+            <div class="contenedor-formulario">
+                <!-- Sección Foto de Perfil -->
+                <div class="seccion-foto">
+                    <div class="tarjeta-foto">
+                        <div class="foto-perfil">
+                            <img src="../../assets/dashBoard/img/foto-nuevo-admin.png" alt="Foto de perfil"
+                                id="foto-preview">
+                        </div>
+                        <label for="foto-input" class="btn-agregar-foto">
+                            Agregar foto
+                        </label>
+                        <input type="file" id="foto-input" accept="image/*" style="display: none;">
+                    </div>
+                </div>
 
-        <!-- Tabla abajo -->
-        <section id="tabla-abajo">
-            <table id="tabla-2" class="display nowrap">
-                <thead>
-                    <tr>
-                        <th>Servicio</th>
-                        <th>Categoria</th>
-                        <th>Precio</th>
-                        <th>Cupos</th>
-                        <th>Modalidad</th>
-                        <th>Acción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Reparación tuberías</td>
-                        <td>Plomeria</td>
-                        <td>$80.000</td>
-                        <td>5</td>
-                        <td>Presencial</td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn-action btn-edit">
-                                    <i class="bi bi-pencil-square"></i>
-                                </button>
-                                <button class="btn-action btn-delete">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Garrett Winters</td>
-                        <td>Accountant</td>
-                        <td>Tokyo</td>
-                        <td>63</td>
-                        <td>2011-07-25</td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn-action btn-edit">
-                                    <i class="bi bi-pencil-square"></i>
-                                </button>
-                                <button class="btn-action btn-delete">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Ashton Cox</td>
-                        <td>Junior Technical Author</td>
-                        <td>San Francisco</td>
-                        <td>66</td>
-                        <td>2009-01-12</td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn-action btn-edit">
-                                    <i class="bi bi-pencil-square"></i>
-                                </button>
-                                <button class="btn-action btn-delete">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Cedric Kelly</td>
-                        <td>Senior JavaScript Developer</td>
-                        <td>Edinburgh</td>
-                        <td>22</td>
-                        <td>2012-03-29</td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn-action btn-edit">
-                                    <i class="bi bi-pencil-square"></i>
-                                </button>
-                                <button class="btn-action btn-delete">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Airi Satou</td>
-                        <td>Accountant</td>
-                        <td>Tokyo</td>
-                        <td>33</td>
-                        <td>2008-11-28</td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn-action btn-edit">
-                                    <i class="bi bi-pencil-square"></i>
-                                </button>
-                                <button class="btn-action btn-delete">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Brielle Williamson</td>
-                        <td>Integration Specialist</td>
-                        <td>New York</td>
-                        <td>61</td>
-                        <td>2012-12-02</td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn-action btn-edit">
-                                    <i class="bi bi-pencil-square"></i>
-                                </button>
-                                <button class="btn-action btn-delete">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                <!-- Formulario -->
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label">Nombres</label>
+                            <input type="text" class="form-control" placeholder="Kevin">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" placeholder="Fleming">
+                        </div>
 
+                        <div class="col-md-6">
+                            <label class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" placeholder="jaskolski.brent@yahoo.com">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Número de teléfono</label>
+                            <input type="text" class="form-control" placeholder="546-933-2772">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Rol o nivel de acceso</label>
+                            <select class="form-select">
+                                <option value="">Seleccionar...</option>
+                                <option>Administrador</option>
+                                <option>Editor</option>
+                                <option>Soporte</option>
+                            </select>
+
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Género</label>
+                            <select class="form-select">
+                                <option value="">Seleccionar...</option>
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                    </div>
+                </form>
+
+        </section>
 
     </main>
 

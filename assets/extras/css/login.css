@@ -147,14 +147,10 @@ main {
 }
 
 .info-card {
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 30px;
-    color: white;
-    width: 80%;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgb(255, 255, 255);
+    width: 70%;
     position: absolute;
     right: 40px;
     top: 50%;
@@ -167,17 +163,20 @@ main {
     font-weight: 600;
     line-height: 1.4;
     margin: 0;
+    position: relative;
+    bottom: 99px;
+  
 }
 
 .info-image {
-    position: absolute;
-    left: 40px;
-    bottom: 40px;
+    position: relative;
+    left: 90px;
     width: 60%;
     max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     z-index: 1;
+
 }
 
 @media (max-width: 992px) {

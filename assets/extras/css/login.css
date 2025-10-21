@@ -28,15 +28,16 @@ main {
     padding: 20px;
 }
 
-.container {
+.custom-container {
     display: flex;
     width: 100%;
     max-width: 1200px;
     height: 600px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    border-radius: 0px;
     overflow: hidden;
     background-color: white;
+    
 }
 
 #login {
@@ -50,13 +51,15 @@ main {
 #login h1 {
     font-size: 32px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: var(--dark-color);
+    text-align: center;
 }
 
 #login>p {
     color: #666;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .form-group {
@@ -103,7 +106,7 @@ main {
 }
 
 .btn-login {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
     color: white;
     border: none;
     padding: 12px;
@@ -112,8 +115,9 @@ main {
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.3s;
-    width: 100%;
     margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
 }
 
 .btn-login:hover {
@@ -124,6 +128,7 @@ main {
 .register-link {
     text-align: center;
     font-size: 14px;
+    margin-top: 75px;
 }
 
 .register-link a {
@@ -138,23 +143,20 @@ main {
 
 .info-section {
     flex: 1;
-    background: url(../img/Rectangle\ 4.png);
+    background: url(../img/Rectangle\ 4.png) ;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px;
+
 }
 
 .info-card {
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 30px;
-    color: white;
-    width: 80%;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgb(255, 255, 255);
+    width: 70%;
     position: absolute;
     right: 40px;
     top: 50%;
@@ -167,18 +169,42 @@ main {
     font-weight: 600;
     line-height: 1.4;
     margin: 0;
+    position: relative;
+    bottom: 99px;
+
 }
 
 .info-image {
-    position: absolute;
-    left: 40px;
-    bottom: 40px;
+    position: relative;
+    left: 90px;
     width: 60%;
     max-width: 400px;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    display: block;
 }
+
+/* prueba */
+.image-container {
+    position: relative;
+    display: inline-block;
+    left: 90px;
+}
+
+
+/* Efecto after en el contenedor */
+.image-container::after {
+    content: "";
+    position: absolute;
+    top: -63px;
+    right: 120px;
+    width: 80%;
+    height: 120%;
+    background: #cccccc3d;
+    backdrop-filter: blur(80px);
+    border-radius: 30px;
+}
+
 
 @media (max-width: 992px) {
     .container {

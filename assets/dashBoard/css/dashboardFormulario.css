@@ -38,7 +38,7 @@ span {
     --font-title: 'Roboto', sans-serif;
     --font-text: 'Poppins', sans-serif;
 
-    --fs-title1: 48px;
+    --fs-title1: 42px;
     --fs-title2: 32px;
     --fs-title3: 24px;
     --fs-title4: 18px;
@@ -453,7 +453,7 @@ body {
 }
 
 .row > div {
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 }
 
 /* 4. Estilos para labels */
@@ -495,7 +495,7 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%) ;
     color: var(--white-color);
     border: none;
     padding: 14px 40px;
@@ -511,7 +511,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #0052cc;
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%) ;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
 }

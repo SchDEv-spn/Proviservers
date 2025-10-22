@@ -1,0 +1,212 @@
+/* Estilos específicos para la página de restablecimiento de contraseña */
+
+#reset-password {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#reset-password h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+#reset-password > p {
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.reset-steps {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.reset-steps h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+.reset-steps ol {
+    padding-left: 20px;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.reset-steps li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.btn-reset {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.btn-reset:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(58, 134, 255, 0.3);
+}
+
+.btn-reset:active {
+    transform: translateY(0);
+}
+
+.btn-reset:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.back-to-login {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.back-to-login a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-to-login a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+.success-message {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    align-items: center;
+    gap: 10px;
+}
+
+.success-message i {
+    font-size: 18px;
+}
+
+.error-message {
+    display: none;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+    align-items: center;
+    gap: 10px;
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.loading-spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilos para el formulario de nueva contraseña (si decides agregarlo después) */
+.new-password-form {
+    display: none;
+}
+
+.password-requirements {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.password-strength {
+    height: 4px;
+    background: #eee;
+    border-radius: 2px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0%;
+    transition: all 0.3s ease;
+}
+
+.strength-weak {
+    background: #ff4757;
+    width: 33%;
+}
+
+.strength-medium {
+    background: #ffa502;
+    width: 66%;
+}
+
+.strength-strong {
+    background: #2ed573;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    #reset-password {
+        padding: 40px 30px;
+    }
+    
+    .reset-steps {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    #reset-password {
+        padding: 30px 20px;
+    }
+    
+    .reset-steps h3 {
+        font-size: 16px;
+    }
+    
+    .reset-steps li {
+        font-size: 14px;
+    }
+}

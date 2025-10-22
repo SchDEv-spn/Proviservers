@@ -116,7 +116,6 @@ a:focus {
   text-decoration: none !important;
 }
 
-/* Línea azul debajo */
 .navbar .nav-link::after {
   content: "";
   position: absolute;
@@ -128,7 +127,6 @@ a:focus {
   transition: width 0.3s ease;
 }
 
-/* Hover: texto azul + línea azul */
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
   color: var(--primary-color) !important;
@@ -139,15 +137,12 @@ a:focus {
   width: 100%;
 }
 
-
-/* Alineación centrada en desktop */
 .navbar-nav {
   margin-left: 2rem;
   justify-content: center;
   align-items: center;
 }
 
-/* Botón "Ingresar" */
 .navbar .btn {
   margin-left: 3.5rem;
   font-weight: 500;
@@ -156,7 +151,6 @@ a:focus {
   font-size: var(--fs-text);
 }
 
-/* Ajustes de padding para el contenedor */
 .py-2 {
   padding-top: 0.3rem !important;
   padding-bottom: 0.3rem !important;
@@ -203,6 +197,78 @@ a:focus {
   }
 }
 
+
+/* ===== HERO SECTION ===== */
+.hero {
+  position: relative;
+  width: 100vw;
+  min-height: auto; 
+  overflow: visible; 
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto; 
+  object-fit: contain; 
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.hero h1 {
+  display: inline-block; 
+  margin: 0;
+  padding: 0;
+  margin-top: 2.5rem;
+  text-align: left; 
+  font-size: var(--fs-title2);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary-proviservers {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+  min-width: 180px; 
+}
+
+.btn-secondary-proviservers {
+  background-color: transparent;
+  color: var(--white-color);
+  border: 2px solid var(--white-color);
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+  min-width: 180px; 
+}
+
+.btn-secondary-proviservers:hover {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
 
 
 

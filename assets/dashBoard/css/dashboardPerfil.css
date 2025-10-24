@@ -169,7 +169,6 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.25s ease;
-    display: flex;
     align-items: center;
     font-size: var(--fs-text);
     font-weight: 500;
@@ -673,6 +672,135 @@ body {
 .sidebar.plegado .menu-secundario p {
   display: none;
 }
+
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu > a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* junta ícono y texto */
+  gap: 10px;
+  position: relative;
+}
+
+.has-submenu > a .toggle-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.has-submenu.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Submenú cerrado por defecto */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #f5f7fb;
+  border-left: 3px solid var(--primary-color);
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+/* Submenú visible */
+.has-submenu.active .submenu {
+  max-height: 200px;
+}
+
+.submenu li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px 10px 45px !important;
+  color: var(--dark-color);
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: background 0.25s ease;
+}
+
+.submenu li a:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+/* Estructura base del contenedor */
+.has-submenu {
+  position: relative;
+}
+
+/* Enlace principal */
+.has-submenu > .menu-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 10px;
+  color: var(--dark-color);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Botón flecha */
+.toggle-submenu {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  top: 14px;
+}
+
+.toggle-icon {
+  font-size: 0.9rem;
+  color: var(--dark-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.has-submenu.active .toggle-icon {
+  transform: rotate(180deg);
+  color: var(--primary-color);
+}
+
+/* Submenú oculto */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  background-color: #f6f7fb;
+  border-left: 3px solid var(--primary-color);
+  border-radius: 6px;
+  margin: 4px 0 0 10px;
+}
+
+/* Submenú visible */
+.has-submenu.active .submenu {
+  max-height: 300px;
+}
+
+/* Estilo de los enlaces del submenú */
+.submenu li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px 10px 45px;
+  color: var(--dark-color);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+  border-radius: 6px;
+}
+
+.submenu li a:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
 
 /* ======== SIDEBAR PLEGABLE ======== */
 .sidebar {

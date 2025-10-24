@@ -128,4 +128,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButtons = document.querySelectorAll(".toggle-submenu");
+
+  toggleButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // evita que el click active el enlace padre
+      const parent = btn.closest(".has-submenu");
+      parent.classList.toggle("active");
+    });
+  });
+});
+
+
+
 

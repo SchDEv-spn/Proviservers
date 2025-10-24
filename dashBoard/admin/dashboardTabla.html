@@ -32,12 +32,22 @@
                 <li><a href="dashboardAdmin.html" data-title="Dashboard"><i
                             class="bi bi-house-door"></i><span>Dashboard</span></a></li>
                 <li><a href="#" data-title="Usuarios"><i class="bi bi-people"></i><span>Usuarios</span></a></li>
-                <li><a href="dashboardTabla.html" class="active" data-title="Servicios"><i
-                            class="bi bi-briefcase"></i><span>Servicios</span></a></li>
-                <li><a href="#" data-title="Categorías de Servicios"><i class="bi bi-grid"></i><span>Categorías de
-                            Servicios</span></a></li>
-                <li><a href="#" data-title="Reportes"><i
-                            class="bi bi-file-earmark-bar-graph"></i><span>Reportes</span></a></li>
+                <li class="has-submenu">
+                    <a href="dashboardTabla.html" data-title="Servicios" class="menu-link active">
+                        <i class="bi bi-briefcase"></i><span>Servicios</span>
+                    </a>
+                    <button class="toggle-submenu" aria-label="Mostrar opciones">
+                        <i class="bi bi-chevron-down toggle-icon"></i>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="registrarServicios.html" class="submenu-link"><i
+                                    class="bi bi-plus-circle"></i>Registrar servicio</a></li>
+                        <li><a href="consultarServicios.html" class="submenu-link"><i class="bi bi-eye"></i>Consultar
+                                servicios</a></li>
+                        <li><a href="gestionarServicios.html" class="submenu-link"><i class="bi bi-gear"></i>Gestionar
+                                servicios</a></li>
+                    </ul>
+                </li>
                 <li><a href="#" data-title="Estadísticas"><i class="bi bi-graph-up"></i><span>Estadísticas</span></a>
                 </li>
             </ul>

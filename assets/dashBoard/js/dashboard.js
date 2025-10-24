@@ -118,3 +118,14 @@ var chartMetricas = new ApexCharts(
 );
 chartMetricas.render();
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btnToggle = document.getElementById("btn-toggle-menu");
+    const sidebar = document.querySelector(".sidebar");
+
+    btnToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("plegado");
+    });
+});
+
+

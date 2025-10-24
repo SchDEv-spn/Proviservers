@@ -169,24 +169,35 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.25s ease;
-    display: flex;
     align-items: center;
     font-size: var(--fs-text);
     font-weight: 500;
     color: var(--dark-color);
 }
 
-.menu-principal li:hover,
-.menu-secundario li:hover {
+/* Estado activo del menú principal */
+.menu-principal a.active,
+.menu-secundario a.active {
     background-color: var(--primary-color);
-    transform: translateX(5px);
     color: var(--white-color);
+    font-weight: 600;
+    transform: translateX(5px);
+    box-shadow: 0 2px 6px rgba(0, 102, 255, 0.3);
 }
 
-/* .menu-principal li:first-child {
-    background-color: var(--primary-color);
-    font-weight: 600;
-} */
+/* --- Barra izquierda decorativa solo en estado activo --- */
+.menu-principal a.active::before,
+.menu-secundario a.active::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 100%;
+  background-color: #006aff;
+  border-radius: 4px;
+}
 
 .menu-secundario p {
     font-size: var(--fs-small);
@@ -657,6 +668,213 @@ body {
 .form-group {
     margin-bottom: 0;
 }
+
+.sidebar.plegado .menu-secundario p {
+  display: none;
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu > a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* junta ícono y texto */
+  gap: 10px;
+  position: relative;
+}
+
+.has-submenu > a .toggle-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.has-submenu.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Submenú cerrado por defecto */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #f5f7fb;
+  border-left: 3px solid var(--primary-color);
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+/* Submenú visible */
+.has-submenu.active .submenu {
+  max-height: 200px;
+}
+
+.submenu li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px 10px 45px !important;
+  color: var(--dark-color);
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: background 0.25s ease;
+}
+
+.submenu li a:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+/* Estructura base del contenedor */
+.has-submenu {
+  position: relative;
+}
+
+/* Enlace principal */
+.has-submenu > .menu-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 10px;
+  color: var(--dark-color);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Botón flecha */
+.toggle-submenu {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  top: 14px;
+}
+
+.toggle-icon {
+  font-size: 0.9rem;
+  color: var(--dark-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.has-submenu.active .toggle-icon {
+  transform: rotate(180deg);
+  color: var(--primary-color);
+}
+
+/* Submenú oculto */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  background-color: #f6f7fb;
+  border-left: 3px solid var(--primary-color);
+  border-radius: 6px;
+  margin: 4px 0 0 10px;
+}
+
+/* Submenú visible */
+.has-submenu.active .submenu {
+  max-height: 300px;
+}
+
+/* Estilo de los enlaces del submenú */
+.submenu li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px 10px 45px;
+  color: var(--dark-color);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+  border-radius: 6px;
+}
+
+.submenu li a:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+
+/* ======== SIDEBAR PLEGABLE ======== */
+.sidebar {
+  width: 260px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar.plegado {
+  width: 80px;
+}
+
+/* Oculta textos cuando está plegado */
+.sidebar.plegado .menu-principal a,
+.sidebar.plegado .menu-secundario a,
+.sidebar.plegado .menu-footer a {
+  text-align: center;
+}
+
+.sidebar.plegado .menu-principal a::after,
+.sidebar.plegado .menu-secundario a::after {
+  display: none;
+}
+
+/* Oculta los textos, deja los íconos */
+.sidebar.plegado a span {
+  display: none;
+}
+
+/* íconos opcionales, si los agregas luego */
+.sidebar a i {
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.sidebar.plegado a i {
+  margin: 0;
+}
+
+/* ======== BOTÓN DE TOGGLE ======== */
+.btn-toggle {
+  background: transparent;
+  border: none;
+  color: var(--azul-oscuro, #2b2d42);
+  font-size: 1.6rem;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Estado normal (sidebar expandido) */
+.sidebar .logo-favicon {
+  display: none;
+}
+
+.sidebar .logo-completo {
+  display: block;
+}
+
+/* Estado plegado */
+.sidebar.plegado .logo-completo {
+  display: none;
+}
+
+.sidebar.plegado .logo-favicon {
+  display: block;
+  width: 40px; /* o el tamaño que desees */
+  margin: 0 auto;
+}
+
 
 /* 9. Responsive Tablet */
 @media screen and (min-width:768px) and (max-width:1080px) {

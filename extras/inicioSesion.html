@@ -18,14 +18,16 @@
 
 <body>
     <header>
-        <!-- Navbar / Logo / hero -->
+        <div class="header-container">
+            <img src="../assets/img/logos/LOGO PRINCIPAL.png" alt="Logo Proviservers" class="header-logo">
+        </div>
     </header>
 
     <main>
         <div class="custom-container">
             <section id="login">
                 <h1>Inicia Sesión</h1>
-                <p>Accede a tu cuenta para encontrar o fofrecer servicios locales</p>
+                <p>Accede a tu cuenta para encontrar o ofrecer servicios locales</p>
                 <form id="loginForm">
                     <div class="form-group">
                         <label for="email">Correo Electrónico</label>
@@ -48,16 +50,41 @@
                 </div>
             </section>
             <section class="info-section">
-                <div class="info-card">
-                    <h2>Te esperan <br> trabajos muy <br> buenos ! <br> Inicia sesion <br> ahora</h2>
-                </div>
-                <div class="image-container">
-                    <img src="../assets/extras/img/women with tab 1.png" alt="Plataforma de trabajo" class="info-image">
+                <!-- Carrusel que ocupa el 80% -->
+                <div id="infoCarousel" class="carousel slide carousel-custom" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="info-card">
+                                <h2>Te esperan <br> trabajos muy <br> buenos ! <br> Inicia sesión <br> ahora</h2>
+                            </div>
+                            <div class="image-container">
+                                <img src="../assets/extras/img/women with tab 1.png" alt="Plataforma de trabajo" class="info-image">
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="info-card">
+                                <h2>Encuentra los <br> mejores <br> profesionales <br> en tu zona</h2>
+                            </div>
+                            <div class="image-container">
+                                <img src="../assets/extras/img/women with tab 1.png" alt="Profesionales" class="info-image">
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="info-card">
+                                <h2>Ofrece tus <br> servicios y <br> crece tu <br> negocio</h2>
+                            </div>
+                            <div class="image-container">
+                                <img src="../assets/extras/img/women with tab 1.png" alt="Emprendedor" class="info-image">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
     </main>
-
 
     <footer>
         <!-- Enlaces / Información -->

@@ -1019,6 +1019,7 @@ a:focus {
 /* ======== CARRUSEL ======== */
 /* ================= TESTIMONIOS ================= */
 
+/* ================= TESTIMONIOS ================= */
 .testimonials-section {
   width: 100%;
   padding: 80px 0;
@@ -1026,12 +1027,13 @@ a:focus {
 }
 
 .testimonials-container {
-  max-width: 1170px;
+  width: 100%;
+  max-width: 110%;
   margin: 0 auto;
-  padding: 0 135px;
+  padding: 0 65px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 50px;
 }
 
 /* ======== CABECERA ======== */
@@ -1045,19 +1047,17 @@ a:focus {
 .testimonials-text {
   flex: 1;
   max-width: 520px;
+  margin-top: 20px;
 }
 
 .testimonials-text h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 42px;
-  color: #111d15;
+  font-family: var(--font-title1);
   line-height: 1.2;
   margin-bottom: 20px;
 }
 
 .testimonials-text p {
-  font-size: 17px;
+  font-size: var(--fs-text);
   color: #666;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -1105,7 +1105,7 @@ a:focus {
   border-radius: 25px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
   padding: 50px 60px;
-  max-width: 950px;
+  max-width: 850px;
   width: 100%;
   transition: all 0.5s ease;
 }
@@ -1130,27 +1130,18 @@ a:focus {
 /* ======== CONTENIDO ======== */
 .testimonial-content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   gap: 40px;
   width: 100%;
   position: relative;
 }
 
-.testimonial-avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background-color: #e6ebff;
-  flex-shrink: 0;
-  object-fit: cover;
-}
-
 .testimonial-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 1px;
   flex-grow: 1;
   position: relative;
   text-align: left;
@@ -1184,12 +1175,13 @@ a:focus {
 
 .testimonial-icon {
   position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 52px;
+  top: 15px;
+  right: 25px;
+  font-size: 50px;
   color: #3366ff;
   opacity: 0.9;
 }
+
 
 
 

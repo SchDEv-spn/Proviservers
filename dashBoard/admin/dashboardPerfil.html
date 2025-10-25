@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../assets/estilosGenerales/style.css">
 
     <!-- tu css -->
-    <link rel="stylesheet" href="../../assets/dashBoard/css/dashboardFormulario.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/css/dashboardPerfil.css">
 </head>
 
 <body>
@@ -66,7 +66,7 @@
                 </li>
                 <li><a href="#" data-title="Facturación"><i class="bi bi-receipt"></i><span>Facturación</span></a></li>
                 <li><a href="#" data-title="Marketing"><i class="bi bi-megaphone"></i><span>Marketing</span></a></li>
-                <li><a href="dashboardFormulario.html" class="active" data-title="Integraciones"><i
+                <li><a href="dashboardFormulario.html" data-title="Integraciones"><i
                             class="bi bi-plug"></i><span>Integraciones</span></a></li>
             </ul>
         </nav>
@@ -107,21 +107,21 @@
                 </div>
 
                 <!-- Usuario -->
-                <a href="dashboardPerfil.html" class="usuario item-barra">
+                <div class="usuario item-barra">
                     <img src="../../assets/dashBoard/img/Foto-usuario.png" alt="Foto usuario">
                     <div class="info-usuario">
                         <span class="nombre">Mony Roy</span>
                         <span class="rol">Admin</span>
                     </div>
                     <i class="bi bi-chevron-down"></i>
-                </a>
+                </div>
 
             </div>
         </header>
         <!--     Secciones -->
         <!-- titulo -->
         <section id="titulo-principal">
-            <h1>Agregar Administradores</h1>
+            <h1>Editar Perfil</h1>
         </section>
 
         <!-- Formualior admin -->
@@ -132,11 +132,11 @@
                 <div class="seccion-foto">
                     <div class="tarjeta-foto">
                         <div class="foto-perfil">
-                            <img src="../../assets/dashBoard/img/foto-nuevo-admin.png" alt="Foto de perfil"
+                            <img src="../../assets/dashBoard/img/Foto-usuario.png" alt="Foto de perfil"
                                 id="foto-preview">
                         </div>
                         <label for="foto-input" class="btn-agregar-foto">
-                            Agregar foto
+                            Cambiar foto
                         </label>
                         <input type="file" id="foto-input" accept="image/*" style="display: none;">
                     </div>
@@ -147,26 +147,26 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label class="form-label">Nombres</label>
-                            <input type="text" class="form-control" placeholder="Kevin">
+                            <input type="text" class="form-control" placeholder="Mony">
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" placeholder="Fleming">
+                            <input type="text" class="form-control" placeholder="Roy">
                         </div>
 
                         <div class="col-md-6">
                             <label class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" placeholder="jaskolski.brent@yahoo.com">
+                            <input type="email" class="form-control" placeholder="monyroy123@gmail.com">
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Número de teléfono</label>
-                            <input type="text" class="form-control" placeholder="546-933-2772">
+                            <input type="text" class="form-control" placeholder="273-456-2872">
                         </div>
 
                         <div class="col-md-6">
                             <label class="form-label">Rol o nivel de acceso</label>
                             <select class="form-select">
-                                <option value="">Seleccionar...</option>
+                                <option value="">Administrador</option>
                                 <option>Administrador</option>
                                 <option>Editor</option>
                                 <option>Soporte</option>
@@ -176,7 +176,7 @@
                         <div class="col-md-6">
                             <label class="form-label">Género</label>
                             <select class="form-select">
-                                <option value="">Seleccionar...</option>
+                                <option value="">Femenino</option>
                                 <option>Masculino</option>
                                 <option>Femenino</option>
                                 <option>Otro</option>
@@ -185,7 +185,7 @@
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Agregar</button>
+                        <button type="submit" class="btn btn-primary">Cambiar</button>
                     </div>
                 </form>
 

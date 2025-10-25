@@ -10,10 +10,10 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- css de estilos globales o generales -->
-    <link rel="stylesheet" href="../assets/estilosGenerales/style.css">
+    <link rel="stylesheet" href="../../assets/estilosGenerales/style.css">
 
     <!-- tu css -->
-     <link rel="stylesheet" href="../../assets/dashBoard/css/dashboard.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/css/dashboard.css">
 </head>
 
 <body>
@@ -21,41 +21,74 @@
     <aside class="sidebar">
         <div class="logo">
             <a href="#">
-                <img src="../../assets/img/logos/LOGO PRINCIPAL.png" alt="Logo Proviservers">
+                <img src="../../assets/img/logos/LOGO PRINCIPAL.png" alt="Logo Proviservers" class="logo-completo">
+                <img src="../../assets/img/logos/FAVICON.png" alt="Logo Proviservers" class="logo-favicon">
             </a>
         </div>
+
+        <!-- Menú principal -->
         <nav class="menu-principal">
             <ul>
-                <a href="dashboardAdmin.html" class="active">Dashboard</a>
-                <li>Usuarios</li>
-                <a href="dashboardTabla.html">Servicios</a>
-                <li>Categorías de Servicios</li>
-                <li>Reportes</li>
-                <li>Estadísticas</li>
+                <li><a href="dashboardAdmin.html" class="active" data-title="Dashboard"><i
+                            class="bi bi-house-door"></i><span>Dashboard</span></a></li>
+                <li><a href="#" data-title="Usuarios"><i class="bi bi-people"></i><span>Usuarios</span></a></li>
+
+                <li class="has-submenu">
+                    <a href="dashboardTabla.html" data-title="Servicios" class="menu-link">
+                        <i class="bi bi-briefcase"></i><span>Servicios</span>
+                    </a>
+                    <button class="toggle-submenu" aria-label="Mostrar opciones">
+                        <i class="bi bi-chevron-down toggle-icon"></i>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="registrarServicios.html" class="submenu-link"><i
+                                    class="bi bi-plus-circle"></i>Registrar servicio</a></li>
+                        <li><a href="consultarServicios.html" class="submenu-link"><i class="bi bi-eye"></i>Consultar
+                                servicios</a></li>
+                        <li><a href="gestionarServicios.html" class="submenu-link"><i class="bi bi-gear"></i>Gestionar
+                                servicios</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" data-title="Categorías de Servicios"><i class="bi bi-grid"></i><span>Categorías de
+                            Servicios</span></a></li>
+                <li><a href="#" data-title="Reportes"><i
+                            class="bi bi-file-earmark-bar-graph"></i><span>Reportes</span></a></li>
+                <li><a href="#" data-title="Estadísticas"><i class="bi bi-graph-up"></i><span>Estadísticas</span></a>
+                </li>
             </ul>
         </nav>
 
+        <!-- Menú secundario -->
         <nav class="menu-secundario">
             <p>Más...</p>
             <ul>
-                <li>Finanzas</li>
-                <li>Calendario</li>
-                <li>Facturación</li>
-                <li>Marketing</li>
-                <li>Integraciones</li>
+                <li><a href="#" data-title="Finanzas"><i class="bi bi-cash-stack"></i><span>Finanzas</span></a></li>
+                <li><a href="#" data-title="Calendario"><i class="bi bi-calendar-event"></i><span>Calendario</span></a>
+                </li>
+                <li><a href="#" data-title="Facturación"><i class="bi bi-receipt"></i><span>Facturación</span></a></li>
+                <li><a href="#" data-title="Marketing"><i class="bi bi-megaphone"></i><span>Marketing</span></a></li>
+                <li><a href="dashboardFormulario.html" data-title="Integraciones"><i
+                            class="bi bi-plug"></i><span>Integraciones</span></a></li>
             </ul>
         </nav>
 
+        <!-- Footer del menú -->
         <div class="menu-footer">
-            <a href="#">Ajustes</a>
-            <a href="../../extras/inicioSesion.html">Cerrar Sesión</a>
+            <a href="#" data-title="Ajustes"><i class="bi bi-gear"></i><span>Ajustes</span></a>
+            <a href="../../extras/inicioSesion.html" data-title="Cerrar Sesión"><i
+                    class="bi bi-box-arrow-right"></i><span>Cerrar Sesión</span></a>
         </div>
-
     </aside>
+
 
     <main class="contenido">
 
         <header class="barra-superior">
+            <!-- Botón para plegar el menú -->
+            <button id="btn-toggle-menu" class="btn-toggle">
+                <i class="bi bi-list"></i>
+            </button>
 
             <!--Barra Superior -->
             <div class="buscador">
@@ -77,14 +110,14 @@
                 </div>
 
                 <!-- Usuario -->
-                <div class="usuario item-barra">
+                <a href="dashboardPerfil.html" class="usuario item-barra">
                     <img src="../../assets/dashBoard/img/Foto-usuario.png" alt="Foto usuario">
                     <div class="info-usuario">
                         <span class="nombre">Mony Roy</span>
                         <span class="rol">Admin</span>
                     </div>
                     <i class="bi bi-chevron-down"></i>
-                </div>
+                </a>
 
             </div>
         </header>

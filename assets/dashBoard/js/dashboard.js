@@ -118,3 +118,28 @@ var chartMetricas = new ApexCharts(
 );
 chartMetricas.render();
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btnToggle = document.getElementById("btn-toggle-menu");
+    const sidebar = document.querySelector(".sidebar");
+
+    btnToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("plegado");
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButtons = document.querySelectorAll(".toggle-submenu");
+
+  toggleButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // evita que el click active el enlace padre
+      const parent = btn.closest(".has-submenu");
+      parent.classList.toggle("active");
+    });
+  });
+});
+
+
+
+

@@ -356,7 +356,7 @@ a:focus {
 .roles-section .section-divider {
   width: 85%;
   height: 1px;
-  background-color: var(--primary-color);
+  background-color: #83a68f;
   margin: 0 auto 3rem auto;
 }
 
@@ -519,6 +519,186 @@ a:focus {
   background-color: transparent;
   color: var(--primary-color);
 }
+
+/* SECCIÓN EQUIPO DE EXPERTOS */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 135px;
+}
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 75px 0;
+}
+
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.team-title {
+  max-width: 610px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 52.8px;
+  color: #111d15;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 448px;
+}
+
+.info-title {
+  font-family: var(--fs-title1);
+  font-size: 20px;
+  line-height: normal;
+  color: #111d15;
+}
+
+.info-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+
+.divider {
+    width: 85%;
+    height: 1px;
+    background-color: #83a68f;
+    margin: 3rem auto 3rem auto;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 370px;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-bordered {
+  border: 1px solid #83a68f;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+
+.card-image {
+  width: 370px;
+  height: 300px;
+  overflow: hidden;
+  background-color: var(--white-color);
+}
+
+.card-bordered .card-image {
+  border-radius: 20px 20px 0 0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28.8px;
+  color: #111c15;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  color: #fbbf24;
+  font-size: 20px;
+}
+
+.card-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+  max-width: 299px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #000000;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background-color: #0066ff;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+
+
+
+
 
 
 

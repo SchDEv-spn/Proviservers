@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../assets/estilosGenerales/style.css">
 
     <!-- tu css -->
-    <link rel="stylesheet" href="../../assets/dashBoard/css/dashboard.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/css/dashboardPerfil.css">
 </head>
 
 <body>
@@ -29,10 +29,9 @@
         <!-- Menú principal -->
         <nav class="menu-principal">
             <ul>
-                <li><a href="dashboardAdmin.html" class="active" data-title="Dashboard"><i
+                <li><a href="dashboardAdmin.html" data-title="Dashboard"><i
                             class="bi bi-house-door"></i><span>Dashboard</span></a></li>
                 <li><a href="#" data-title="Usuarios"><i class="bi bi-people"></i><span>Usuarios</span></a></li>
-
                 <li class="has-submenu">
                     <a href="dashboardTabla.html" data-title="Servicios" class="menu-link">
                         <i class="bi bi-briefcase"></i><span>Servicios</span>
@@ -49,7 +48,6 @@
                                 servicios</a></li>
                     </ul>
                 </li>
-
                 <li><a href="#" data-title="Categorías de Servicios"><i class="bi bi-grid"></i><span>Categorías de
                             Servicios</span></a></li>
                 <li><a href="#" data-title="Reportes"><i
@@ -81,7 +79,6 @@
         </div>
     </aside>
 
-
     <main class="contenido">
 
         <header class="barra-superior">
@@ -110,63 +107,89 @@
                 </div>
 
                 <!-- Usuario -->
-                <a href="dashboardPerfil.html" class="usuario item-barra">
+                <div class="usuario item-barra">
                     <img src="../../assets/dashBoard/img/Foto-usuario.png" alt="Foto usuario">
                     <div class="info-usuario">
                         <span class="nombre">Mony Roy</span>
                         <span class="rol">Admin</span>
                     </div>
                     <i class="bi bi-chevron-down"></i>
-                </a>
+                </div>
 
             </div>
         </header>
         <!--     Secciones -->
         <!-- titulo -->
         <section id="titulo-principal">
-            <h1>Dashboard</h1>
+            <h1>Editar Perfil</h1>
         </section>
 
-        <!-- Grafica Principal -->
-        <section id="grafica-principal">
-            <h2>Total servicios publicados</h2>
-            <select id="periodo">
-                <option value="mensual">Mensual</option>
-                <option value="semanal">Semanal</option>
-                <option value="anual">Anual</option>
-            </select>
-            <div id="chart"></div>
-        </section>
-
-        <!-- tarjetas inferiores -->
-        <section id="tarjetas-inferiores">
-            <!-- tarjeta usuarios -->
-            <div class="tarjeta">
-                <h2>Usuarios</h2>
-                <div id="chart-usuarios"></div>
-                <div class="metricas">
-                    <span class="valor">34,249</span>
-                    <span class="valor">1,420</span>
+        <!-- Formualior admin -->
+        <section id="formulario">
+            <!-- foto admin -->
+            <div class="contenedor-formulario">
+                <!-- Sección Foto de Perfil -->
+                <div class="seccion-foto">
+                    <div class="tarjeta-foto">
+                        <div class="foto-perfil">
+                            <img src="../../assets/dashBoard/img/Foto-usuario.png" alt="Foto de perfil"
+                                id="foto-preview">
+                        </div>
+                        <label for="foto-input" class="btn-agregar-foto">
+                            Cambiar foto
+                        </label>
+                        <input type="file" id="foto-input" accept="image/*" style="display: none;">
+                    </div>
                 </div>
-            </div>
 
-            <!-- tarjeta servicio destacaddo -->
-            <div class="tarjeta">
-                <h3>Servicio Destacado</h3>
-                <div class="servicio-imagen">
-                    <img src="../../assets/dashBoard/img/imagen-servicio.png" alt="Foto Servicio">
-                </div>
-                <div class="servicio-nombre">Plomería</div>
-            </div>
+                <!-- Formulario -->
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label">Nombres</label>
+                            <input type="text" class="form-control" placeholder="Mony">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" placeholder="Roy">
+                        </div>
 
-            <!-- tarjeta metricas -->
-            <div class="tarjeta">
-                <h2>Métricas de Servicios</h2>
-                <div id="chart-nuevos-servicios"></div>
-            </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" placeholder="monyroy123@gmail.com">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Número de teléfono</label>
+                            <input type="text" class="form-control" placeholder="273-456-2872">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Rol o nivel de acceso</label>
+                            <select class="form-select">
+                                <option value="">Administrador</option>
+                                <option>Administrador</option>
+                                <option>Editor</option>
+                                <option>Soporte</option>
+                            </select>
+
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Género</label>
+                            <select class="form-select">
+                                <option value="">Femenino</option>
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Cambiar</button>
+                    </div>
+                </form>
 
         </section>
-
 
     </main>
 

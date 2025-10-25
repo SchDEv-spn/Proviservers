@@ -118,6 +118,7 @@ body {
 }
 
 .logo {
+    padding: 0 25px 25px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 25px;
 }
@@ -197,6 +198,7 @@ body {
   background-color: #006aff;
   border-radius: 4px;
 }
+
 
 .menu-secundario p {
     font-size: var(--fs-small);
@@ -348,16 +350,16 @@ body {
     color: var(--dark-color);
 }
 
-.usuario {
-    text-decoration: none;
-}
-
 .usuario img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #e2e8f0;
+}
+
+.usuario {
+    text-decoration: none;
 }
 
 .info-usuario {
@@ -389,18 +391,17 @@ body {
     font-family: var(--font-title);
 }
 
-/* 6. Gráfica Principal */
-#grafica-principal {
+/* 1. Estilos generales para secciones de tablas */
+#tabla-arriba, #tabla-abajo {
     background-color: var(--white-color);
     border-radius: 12px;
-    padding: 30px;
+    padding: 25px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
     border: 1px solid #e2e8f0;
-    position: relative;
 }
 
-#grafica-principal h2 {
+#tabla-arriba h2, #tabla-abajo h2 {
     font-size: var(--fs-title3);
     margin-bottom: 20px;
     color: var(--dark-color);
@@ -408,125 +409,329 @@ body {
     font-weight: 600;
 }
 
-#periodo {
-    position: absolute;
-    top: 18px;
-    right: 30px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    background-color: var(--white-color);
-    outline: none;
-    cursor: pointer;
-    font-size: var(--fs-text);
+/* 2. Estilos generales para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
     font-family: var(--font-text);
-    color: var(--dark-color);
-    transition: all 0.25s ease;
-}
-
-#periodo:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
-}
-
-#chart {
-    height: 320px;
-    background-color: #f8fafc;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #64748b;
-    font-weight: 500;
     font-size: var(--fs-text);
-    border: 1px dashed #cbd5e1;
-}
-
-/* 7. Tarjetas Inferiores */
-#tarjetas-inferiores {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.tarjeta {
     background-color: var(--white-color);
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
-    display: flex;
-    flex-direction: column;
-    transition: all 0.25s ease;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.tarjeta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* 3. Cabeceras de tabla */
+thead {
+    background-color: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
 }
 
-.tarjeta h2,
-.tarjeta h3 {
-    font-size: var(--fs-title4);
-    margin-bottom: 20px;
+thead th {
+    padding: 16px 20px;
+    text-align: left;
+    font-weight: 600;
     color: var(--dark-color);
     font-family: var(--font-title);
+    font-size: var(--fs-title4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+/* 4. Celdas de tabla */
+tbody td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+    transition: all 0.25s ease;
+}
+
+/* 5. Filas de tabla */
+tbody tr {
+    transition: all 0.25s ease;
+}
+
+tbody tr:hover {
+    background-color: #f8fafc;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* 6. Estados específicos */
+td:last-child {
+    font-weight: 500;
+}
+
+/* Estados para la columna de estado */
+td:nth-child(6) {
+    position: relative;
+    padding-left: 30px;
     font-weight: 600;
 }
 
-#chart-usuarios,
-#chart-nuevos-servicios {
-    height: 160px;
-    background-color: #f8fafc;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+td:nth-child(6)::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+/* Estado: Completado */
+td:nth-child(6):contains("Completado")::before {
+    background-color: #10b981;
+}
+
+td:nth-child(6):contains("Completado") {
+    color: #10b981;
+}
+
+/* Estado: En proceso */
+td:nth-child(6):contains("En proceso")::before {
+    background-color: #f59e0b;
+}
+
+td:nth-child(6):contains("En proceso") {
+    color: #f59e0b;
+}
+
+/* Estado: Pendiente */
+td:nth-child(6):contains("Pendiente")::before {
+    background-color: #ef4444;
+}
+
+td:nth-child(6):contains("Pendiente") {
+    color: #ef4444;
+}
+
+/* 7. Botones de acción */
+td:last-child button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin-right: 8px;
     color: #64748b;
-    font-weight: 500;
-    margin-bottom: 20px;
-    border: 1px dashed #cbd5e1;
+    font-size: 16px;
+}
+
+td:last-child button:hover {
+    background-color: #f1f5f9;
+    transform: scale(1.1);
+}
+
+/* Botón editar */
+td:last-child button:first-child:hover {
+    color: var(--primary-color);
+}
+
+/* Botón eliminar */
+td:last-child button:last-child:hover {
+    color: #ef4444;
+}
+
+/* 8. IDs de tabla con estilo especial */
+td:first-child {
+    font-family: var(--font-title);
+    font-weight: 600;
+    color: var(--primary-color);
     font-size: var(--fs-text);
 }
 
-.metricas {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
-}
-
-.valor {
-    font-size: var(--fs-title2);
-    font-weight: 700;
-    color: var(--dark-color);
+/* 9. Precios con formato monetario */
+td:nth-child(3) {
+    font-weight: 600;
+    color: #059669;
     font-family: var(--font-title);
 }
 
-.servicio-imagen {
-    height: auto;
-    background-color: #f8fafc;
+/* 10. Scroll para tablas en dispositivos pequeños */
+.table-container {
+    overflow-x: auto;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    overflow: hidden;
-    border: 1px dashed #cbd5e1;
 }
 
-.servicio-imagen img {
+/* 11. Estados de usuario/proveedor */
+td:nth-child(2) {
+    position: relative;
+}
+
+td:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #94a3b8;
+}
+
+/* Cliente */
+td:nth-child(2):contains("Cliente")::after {
+    background-color: var(--primary-color);
+}
+
+/* Proveedor */
+td:nth-child(2):contains("Proveedor")::after {
+    background-color: #8b5cf6;
+}
+
+/* 12. Efectos de hover mejorados */
+table {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease;
+}
+
+table:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 13. Responsive Tablet */
+@media screen and (min-width:768px) and (max-width:1080px) {
+    #tabla-arriba, #tabla-abajo {
+        padding: 20px;
+    }
+    
+    thead th, tbody td {
+        padding: 14px 16px;
+        font-size: var(--fs-small);
+    }
+    
+    thead th {
+        font-size: var(--fs-text);
+    }
+}
+
+/* 14. Responsive Smartphone */
+@media screen and (min-width:320px) and (max-width:767px) {
+    #tabla-arriba, #tabla-abajo {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .table-container {
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+    }
+    
+    table {
+        min-width: 600px; /* Forza el scroll horizontal */
+    }
+    
+    thead th, tbody td {
+        padding: 12px 14px;
+        font-size: var(--fs-small);
+    }
+    
+    thead th {
+        font-size: var(--fs-text);
+        padding: 14px 16px;
+    }
+    
+    td:last-child button {
+        padding: 6px 10px;
+        margin-right: 4px;
+    }
+}
+
+/* 15. Estados de carga para tablas */
+.table-loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.table-loading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    animation: loading 1.5s infinite;
 }
 
-.servicio-nombre {
-    font-size: var(--fs-title4);
-    font-weight: 600;
-    text-align: center;
-    color: var(--dark-color);
-    font-family: var(--font-title);
-    margin-top: auto;
+@keyframes loading {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* 16. Indicadores visuales para acciones */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    background-color: var(--white-color);
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-action:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-edit:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-delete:hover {
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+/* 17. Badges para estados */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: var(--fs-small);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-completed {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-in-progress {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-pending {
+    background-color: #fee2e2;
+    color: #991b1b;
 }
 
 /* 8. Estados de carga o vacío */
@@ -538,6 +743,11 @@ body {
     color: #94a3b8;
     font-style: italic;
 }
+
+.sidebar.plegado .menu-secundario p {
+  display: none;
+}
+
 
 .has-submenu {
   position: relative;
@@ -668,64 +878,43 @@ body {
 }
 
 
-.sidebar.plegado .menu-secundario p {
-  display: none;
-}
-
-/* ======== SIDEBAR PLEGABLE (actualizado para mantener el mismo estilo) ======== */
+/* ======== SIDEBAR PLEGABLE ======== */
 .sidebar {
   width: 260px;
   transition: width 0.3s ease;
   overflow: hidden;
 }
 
-/* Modo plegado — mantiene la misma apariencia visual */
 .sidebar.plegado {
-  width: 260px; /* igual que expandida */
+  width: 80px;
 }
 
-/* No se oculta ningún texto ni ícono */
+/* Oculta textos cuando está plegado */
 .sidebar.plegado .menu-principal a,
 .sidebar.plegado .menu-secundario a,
 .sidebar.plegado .menu-footer a {
-  text-align: left;
+  text-align: center;
 }
 
+.sidebar.plegado .menu-principal a::after,
+.sidebar.plegado .menu-secundario a::after {
+  display: none;
+}
+
+/* Oculta los textos, deja los íconos */
 .sidebar.plegado a span {
-  display: inline;
+  display: none;
 }
 
+/* íconos opcionales, si los agregas luego */
 .sidebar a i {
   margin-right: 10px;
   transition: all 0.3s ease;
 }
 
 .sidebar.plegado a i {
-  margin-right: 10px;
+  margin: 0;
 }
-
-/* Mantiene logos igual */
-.sidebar .logo-favicon {
-  display: none;
-}
-
-.sidebar .logo-completo {
-  display: block;
-}
-
-.sidebar.plegado .logo-completo {
-  display: block;
-}
-
-.sidebar.plegado .logo-favicon {
-  display: none;
-}
-
-/* Ocultar botón de despliegue en modo plegado */
-.sidebar.plegado .toggle-submenu {
-  display: none;
-}
-
 
 /* ======== BOTÓN DE TOGGLE ======== */
 .btn-toggle {
@@ -740,6 +929,26 @@ body {
 
 .btn-toggle:hover {
   transform: scale(1.1);
+}
+
+/* Estado normal (sidebar expandido) */
+.sidebar .logo-favicon {
+  display: none;
+}
+
+.sidebar .logo-completo {
+  display: block;
+}
+
+/* Estado plegado */
+.sidebar.plegado .logo-completo {
+  display: none;
+}
+
+.sidebar.plegado .logo-favicon {
+  display: block;
+  width: 40px; /* o el tamaño que desees */
+  margin: 0 auto;
 }
 
 

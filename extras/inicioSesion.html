@@ -11,6 +11,7 @@
 
     <!-- css de estilos globales o generales -->
     <link rel="stylesheet" href="../assets/estilosGenerales/style.css">
+    <link rel="stylesheet" href="../assets/extras/css/login.css">
 
     <!-- tu css -->
 </head>
@@ -21,7 +22,7 @@
     </header>
 
     <main>
-        <div class="container">
+        <div class="custom-container">
             <section id="login">
                 <h1>LOGIN</h1>
                 <p>Accede a tu cuenta para encontrar o fofrecer servicios locales</p>
@@ -38,20 +39,21 @@
                         <label>
                             <input type="checkbox"> Recordarme
                         </label>
-                        <a href="#">¿Olvidaste tu contraseña?</a>
+                        <a href="reestablecer-Contrasena.html">¿Olvidaste tu contraseña?</a>
                     </div>
                     <button type="submit" class="btn-login">Iniciar Sesión</button>
                 </form>
                 <div class="register-link">
-                    <p>¿No tienes una cuenta? <a href="#">Regístrate aquí</a></p>
+                    <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
                 </div>
             </section>
             <section class="info-section">
                 <div class="info-card">
-                    <h2>Te esperan trabajos muy buenos ! Inicia sesion ahora</h2>
+                    <h2>Te esperan <br> trabajos muy <br> buenos ! <br> Inicia sesion <br> ahora</h2>
                 </div>
-                <img src="../assets/img/logos/FAVICON.png"
-                    alt="Plataforma de trabajo" class="info-image">
+                <div class="image-container">
+                    <img src="../assets/extras/img/women with tab 1.png" alt="Plataforma de trabajo" class="info-image">
+                </div>
             </section>
         </div>
     </main>
@@ -66,7 +68,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <!-- tu javaScript -->
+    <script src="../assets/extras/js/login.js"></script>
 </body>
 
 </html>

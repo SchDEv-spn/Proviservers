@@ -1,4 +1,4 @@
-/* === RESET === */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,26 +6,27 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* === CONTENEDOR GENERAL === */
+/* CONTENEDOR GENERAL */
 #contenedor {
   display: flex;
-  min-height: 100vh;
+  height: 100vh; /* evita el scroll */
+  overflow: hidden; /* bloquea el desplazamiento */
 }
 
-/* === COLUMNA IZQUIERDA === */
+/* COLUMNA IZQUIERDA */
 .columna.izquierda {
   flex: 1;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 90px;
+  padding: 0 90px;
 }
 
 .columna.izquierda h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   margin-bottom: 15px;
 }
 
@@ -51,7 +52,7 @@ input {
 }
 
 button {
-  background: linear-gradient(90deg, #0049ff, #0066ff);
+  background: linear-gradient(90deg,#0066ff, #0F0F0F);
   color: #fff;
   font-weight: 700;
   border: none;
@@ -80,10 +81,10 @@ button:hover {
   text-decoration: none;
 }
 
-/* === COLUMNA DERECHA === */
+/* COLUMNA DERECHA */
 .columna.derecha {
   flex: 1;
-  background: url("/assets/img/registro/Rectangle\ 8.png") no-repeat center center/cover;
+  background: url("/assets/img/registro/Rectangle 8.png") no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,24 +92,31 @@ button:hover {
 }
 
 .contenido-derecha {
-  text-align: left;
-  color: #fff;
-  max-width: 400px;
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
+    text-align: left;
+    color: #fff;
+    max-width: 400px;
+    padding: 288px 30px 0 30px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    position: relative;
+    top: -40px;
 }
-
 .contenido-derecha h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-size: 1.6rem;
-  line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin: 0;
+    position: relative;
+    top: -258px;
 }
 
+
+
+/* Imagen persona */
 .imagen-persona {
   position: absolute;
   bottom: 0;
-  right: 60px;
-  width: 280px;
+  right: -89px;;
+  width: 290px;
 }

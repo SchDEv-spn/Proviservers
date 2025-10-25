@@ -1039,10 +1039,11 @@ a:focus {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
 }
 
 .testimonials-text {
+  flex: 1;
   max-width: 520px;
 }
 
@@ -1091,7 +1092,7 @@ a:focus {
 
 /* ======== CARRUSEL ======== */
 .testimonial-carousel {
-  width: 100%;
+  flex: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1103,21 +1104,22 @@ a:focus {
   border: 3px solid #3366ff;
   border-radius: 25px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-  padding: 50px;
-  max-width: 900px;
+  padding: 50px 60px;
+  max-width: 950px;
   width: 100%;
   transition: all 0.5s ease;
 }
 
 .testimonial-card.active {
   display: flex;
+  justify-content: center;
   animation: fadeIn 0.6s ease;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -1128,8 +1130,10 @@ a:focus {
 /* ======== CONTENIDO ======== */
 .testimonial-content {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 40px;
+  width: 100%;
   position: relative;
 }
 
@@ -1145,9 +1149,11 @@ a:focus {
 .testimonial-info {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  position: relative;
+  justify-content: flex-start;
+  gap: 10px;
   flex-grow: 1;
+  position: relative;
+  text-align: left;
 }
 
 .testimonial-info h3 {
@@ -1173,18 +1179,17 @@ a:focus {
   color: #555;
   line-height: 1.7;
   margin-top: 8px;
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .testimonial-icon {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 0;
+  right: 0;
   font-size: 52px;
   color: #3366ff;
   opacity: 0.9;
 }
-
 
 
 

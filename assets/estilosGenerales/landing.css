@@ -1101,14 +1101,18 @@ a:focus {
 .testimonial-card {
   display: none;
   background-color: #ffffff;
-  border: 3px solid #3366ff;
-  border-radius: 25px;
+  border-top: 14px solid #3366ff;
+  border-right: 12px solid #3366ff;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 25px 25px 0 0; /* solo esquinas superiores redondeadas */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
   padding: 50px 60px;
-  max-width: 850px;
+  max-width: 800px;
   width: 100%;
   transition: all 0.5s ease;
 }
+
 
 .testimonial-card.active {
   display: flex;

@@ -912,8 +912,6 @@ a:focus {
 }
 
 /* ===== TESTIMONIALS SECTION ===== */
-/* ================= TESTIMONIOS ================= */
-
 .testimonials-section {
   width: 100%;
   padding: 80px 0;
@@ -1153,7 +1151,7 @@ a:focus {
   color: var(--primary-color);
   opacity: 0.9;
 }
-
+/*contact*/
 .contact-section {
   padding: 80px 0;
   font-family: 'Poppins', sans-serif;

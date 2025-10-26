@@ -1301,6 +1301,93 @@ a:focus {
   background-color: #254eda;
 }
 
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--dark-color); 
+  padding: 4rem 0 2rem;
+  font-family: var(--font-text, 'Poppins', sans-serif);
+}
+
+/* ===== Logo ===== */
+footer img {
+  width: 240px;
+  height: auto;
+  margin-bottom: 1rem;
+  filter: brightness(1.1);
+}
+
+/* ===== Texto descriptivo ===== */
+footer p {
+  font-size: var(--fs-text);
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+  padding: 0;
+}
+
+/* ===== Títulos de columnas ===== */
+footer h5 {
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  padding-left: 20px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Enlaces ===== */
+footer a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  padding-left: 20px;
+  transition: all 0.3s ease;
+  line-height: 2.8;
+}
+
+footer a:hover {
+  color: var(--primary-color, #0d6efd);
+  text-decoration: underline;
+}
+
+/* ===== Formulario (hoja informativa) ===== */
+footer form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+footer input[type="email"] {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  font-size: var(--fs-small);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+footer input[type="email"]::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+footer input[type="email"]:focus {
+  border-color: var(--primary-color, #0d6efd);
+  box-shadow: 0 0 6px rgba(13, 110, 253, 0.4);
+}
+
+/* ===== Botón ===== */
+footer .footer-btn {
+  padding: 0.3rem 1.8rem; 
+  font-size: var(--font-text);     
+  border-radius: 6px;
+  background-color: var(--primary-color, #0d6efd);
+  border: none;
+  transition: all 0.3s ease;
+  width: fit-content; 
+}
+
+footer .footer-btn:hover {
+  background-color: #0b5ed7;
+}
 
 
 

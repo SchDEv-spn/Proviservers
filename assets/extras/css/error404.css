@@ -123,3 +123,29 @@ body::before {
     object-fit: contain;
     z-index: 2; 
 }
+
+/* 4. Mensajes de Texto */
+
+.text-content {
+    text-align: center;
+    /* AJUSTE CLAVE: Bajamos el texto considerablemente */
+    margin-top: 200px; 
+}
+.text-content {
+    text-align: center;
+    /* AJUSTE CLAVE: Aumentamos el margen para bajarlo */
+    margin-top: 70px; /* Cambiado de 50px a 70px */
+}
+.message-title {
+    font-size: 1.5em; 
+    font-weight: 400;
+    letter-spacing: 5px; 
+    margin-bottom: 10px;
+}
+
+.message-subtitle {
+    font-size: 1.2em; 
+    font-weight: 700; 
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}

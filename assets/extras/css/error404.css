@@ -21,7 +21,7 @@ body {
 }
 
 /* 2. Efecto de Fondo Estrellado (Animado) */
-/* -------------------------------------- */
+
 @keyframes star-scroll {
     from {
         background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
@@ -148,4 +148,62 @@ body::before {
     font-weight: 700; 
     margin-bottom: 30px;
     letter-spacing: 2px;
+}
+
+/* 5. Botones (Mantener el estilo original) */
+
+.actions {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 20px;
+    
+}
+
+.btn {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #ffffff; 
+    color: #ffffff;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px 15px;
+    }
+    
+    .big-404 {
+        font-size: 150px; 
+        letter-spacing: 60px; /* Ajuste para móvil */
+    }
+
+    .space-scene {
+        height: 250px; 
+    }
+
+    .main-illustration {
+        width: 100px; /* Ajuste para móvil */
+        transform: translate(-50%, calc(-50% + 10px));
+    }
+    .text-content {
+        margin-top: -15px;
+    }
 }

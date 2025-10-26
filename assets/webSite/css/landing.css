@@ -101,6 +101,10 @@ a:focus {
 .navbar {
   width: 100%;
   max-width: 100vw;
+  position: fixed; /* ahora sí queda siempre fija */
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .navbar-brand {
@@ -170,42 +174,6 @@ a:focus {
   padding-left: 2rem !important;
 }
 
-/* ===== ANIMACIÓN SOLO EN MÓVILES ===== */
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    text-align: right;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    align-items: flex-end !important;
-    justify-content: flex-start !important;
-    margin-left: 0;
-  }
-
-  .navbar-nav .nav-item {
-    width: 100%;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-  }
-
-  .navbar-nav.show-items .nav-item {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .navbar-nav .nav-link,
-  .navbar-nav .btn {
-    display: inline-block;
-    text-align: right;
-  }
-
-  .navbar-nav .btn {
-    margin-top: 1rem;
-  }
-}
-
 
 /* ===== HERO SECTION ===== */
 .hero {
@@ -223,7 +191,7 @@ a:focus {
 
 .hero-img {
   position: absolute;
-  top: 0;
+  top: 70px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -248,7 +216,7 @@ a:focus {
   display: inline-block; 
   margin: 0;
   padding: 0;
-  margin-top: 2.5rem;
+  margin-top: 8.5rem;
   text-align: left; 
   font-size: var(--fs-title2);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
@@ -1335,7 +1303,187 @@ a:focus {
   background-color: #254eda;
 }
 
+footer {
+  display: flex;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 1.25rem;
+  padding-left: 135px;
+  padding-right: 135px;
+  background-color: #0e1116;
+}
 
+footer img.logo {
+  position: relative;
+  width: 281px;
+  height: 74px;
+  object-fit: cover;
+}
+
+.footer-content {
+  display: flex;
+  width: 1170px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.footer-description {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.footer-description p {
+  position: relative;
+  width: 356px;
+  margin-top: -1px;
+  font-family: 'Be Vietnam', Helvetica;
+  font-weight: 300;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 25.6px;
+}
+
+.footer-nav {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.25rem;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.footer-nav h3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: 'Be Vietnam', Helvetica;
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.footer-nav ul {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  position: relative;
+  flex: 0 0 auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav ul li a {
+  position: relative;
+  width: fit-content;
+  font-family: 'Be Vietnam', Helvetica;
+  font-weight: 500;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer-nav ul li a:hover {
+  opacity: 0.8;
+}
+
+.footer-newsletter {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.footer-newsletter h3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: 'Be Vietnam', Helvetica;
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.footer-newsletter input {
+  display: flex;
+  width: 291px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #808080;
+  background-color: transparent;
+  font-family: 'Be Vietnam', Helvetica;
+  font-weight: 400;
+  color: #9e9e9e;
+  font-size: 16px;
+}
+
+.footer-newsletter input::placeholder {
+  color: #9e9e9e;
+}
+
+.footer-newsletter button {
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 28px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #0066ff;
+  border-radius: 6px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background-color: #0052cc;
+}
+
+.footer-newsletter button span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: 'Be Vietnam', Helvetica;
+  font-weight: 700;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
 
 
 

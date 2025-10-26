@@ -1,0 +1,21 @@
+/* -------------------------------------- */
+/* 1. Reset Básico y Estilos Generales */
+/* -------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d111c; 
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden; 
+    position: relative; 
+}

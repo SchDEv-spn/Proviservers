@@ -12,3 +12,40 @@ document.addEventListener("DOMContentLoaded", function () {
     navList.classList.remove("show-items");
   });
 });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".testimonial-card");
+    const prevBtn = document.querySelector(".arrow-btn.prev");
+    const nextBtn = document.querySelector(".arrow-btn.next");
+
+    let currentIndex = 0;
+
+    function showTestimonial(index) {
+      cards.forEach((card, i) => {
+        card.classList.toggle("active", i === index);
+      });
+    }
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      showTestimonial(currentIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      showTestimonial(currentIndex);
+    });
+
+    // ✅ Cambio automático cada 5 segundos (opcional)
+    // Descomenta las 2 líneas de abajo si quieres activarlo:
+    /*
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      showTestimonial(currentIndex);
+    }, 5000);
+    */
+
+    // Mostrar el primer testimonio al cargar
+    showTestimonial(currentIndex);
+  });

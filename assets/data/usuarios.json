@@ -1,0 +1,66 @@
+[
+  {
+    "nombre": "Mony Roy",
+    "rol": "Administrador",
+    "correo": "mony.roy@proviservers.com",
+    "telefono": "+57 310 569 8745",
+    "ciudad": "Bogotá",
+    "miembroDesde": "2022-11-10"
+  },
+  {
+    "nombre": "Carlos Gómez",
+    "rol": "Proveedor",
+    "correo": "carlos.gomez@proviservers.com",
+    "telefono": "+57 320 789 4561",
+    "ciudad": "Medellín",
+    "miembroDesde": "2023-02-25"
+  },
+  {
+    "nombre": "Sofía Ramírez",
+    "rol": "Cliente",
+    "correo": "sofia.ramirez@proviservers.com",
+    "telefono": "+57 311 654 9982",
+    "ciudad": "Cali",
+    "miembroDesde": "2023-05-18"
+  },
+  {
+    "nombre": "Miguel Torres",
+    "rol": "Proveedor",
+    "correo": "miguel.torres@proviservers.com",
+    "telefono": "+57 318 554 3321",
+    "ciudad": "Bucaramanga",
+    "miembroDesde": "2024-01-03"
+  },
+  {
+    "nombre": "Daniela Ortiz",
+    "rol": "Cliente",
+    "correo": "daniela.ortiz@proviservers.com",
+    "telefono": "+57 301 220 8741",
+    "ciudad": "Cartagena",
+    "miembroDesde": "2024-04-27"
+  },
+  {
+    "nombre": "Pedro Álvarez",
+    "rol": "Proveedor",
+    "correo": "pedro.alvarez@proviservers.com",
+    "telefono": "+57 312 779 4450",
+    "ciudad": "Neiva",
+    "miembroDesde": "2024-07-11"
+  },
+  {
+    "nombre": "Camila López",
+    "rol": "Cliente",
+    "correo": "camila.lopez@proviservers.com",
+    "telefono": "+57 300 558 7744",
+    "ciudad": "Manizales",
+    "miembroDesde": "2024-09-01"
+  },
+  {
+    "nombre": "Andrés Herrera",
+    "rol": "Proveedor",
+    "correo": "andres.herrera@proviservers.com",
+    "telefono": "+57 321 654 7852",
+    "ciudad": "Pereira",
+    "miembroDesde": "2024-10-15"
+  }
+]

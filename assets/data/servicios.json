@@ -1,0 +1,82 @@
+[
+  {
+    "id": "00001",
+    "usuario": "Christine Brooks (Cliente)",
+    "direccion": "Calle 89 #24-15, Bogotá",
+    "fecha": "14 Febrero 2025",
+    "servicio": "Plomería",
+    "estado": "Completado"
+  },
+  {
+    "id": "00002",
+    "usuario": "Juan Pérez (Cliente)",
+    "direccion": "Carrera 45 #10-50, Medellín",
+    "fecha": "20 Marzo 2025",
+    "servicio": "Electricidad",
+    "estado": "En proceso"
+  },
+  {
+    "id": "00003",
+    "usuario": "Sofía Ramírez (Cliente)",
+    "direccion": "Av. Simón Bolívar #33-90, Cali",
+    "fecha": "05 Abril 2025",
+    "servicio": "Carpintería",
+    "estado": "Pendiente"
+  },
+  {
+    "id": "00004",
+    "usuario": "Carlos Gómez (Cliente)",
+    "direccion": "Calle 5 #11-22, Bucaramanga",
+    "fecha": "19 Abril 2025",
+    "servicio": "Pintura de interiores",
+    "estado": "Completado"
+  },
+  {
+    "id": "00005",
+    "usuario": "Luisa Herrera (Cliente)",
+    "direccion": "Barrio San José, Manizales",
+    "fecha": "23 Abril 2025",
+    "servicio": "Jardinería",
+    "estado": "Pendiente"
+  },
+  {
+    "id": "00006",
+    "usuario": "Miguel Torres (Cliente)",
+    "direccion": "Carrera 8 #76-12, Pasto",
+    "fecha": "01 Mayo 2025",
+    "servicio": "Reparación de techos",
+    "estado": "En proceso"
+  },
+  {
+    "id": "00007",
+    "usuario": "Camila López (Cliente)",
+    "direccion": "Calle 11 #8-40, Pereira",
+    "fecha": "04 Mayo 2025",
+    "servicio": "Limpieza general",
+    "estado": "Completado"
+  },
+  {
+    "id": "00008",
+    "usuario": "Daniel Castro (Cliente)",
+    "direccion": "Calle 30 #22-70, Neiva",
+    "fecha": "10 Mayo 2025",
+    "servicio": "Reparación de electrodomésticos",
+    "estado": "En proceso"
+  },
+  {
+    "id": "00009",
+    "usuario": "Mariana Duarte (Cliente)",
+    "direccion": "Av. 3N #45-100, Cali",
+    "fecha": "14 Mayo 2025",
+    "servicio": "Fontanería",
+    "estado": "Pendiente"
+  },
+  {
+    "id": "00010",
+    "usuario": "Pedro Álvarez (Cliente)",
+    "direccion": "Urbanización Los Cedros, Montería",
+    "fecha": "18 Mayo 2025",
+    "servicio": "Mantenimiento de piscinas",
+    "estado": "Completado"
+  }
+]

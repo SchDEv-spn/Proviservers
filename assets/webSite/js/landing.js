@@ -13,6 +13,44 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButtons = document.querySelectorAll(".toggle-btn");
+  const prices = document.querySelectorAll(".plan-price");
+
+  // Valores originales y anuales
+  const planData = {
+    mensual: [
+      { price: "Gratis", period: "/Mensual" },
+      { price: "25.000", period: "/Mensual" },
+      { price: "49.000", period: "/Mensual" },
+    ],
+    anual: [
+      { price: "0", period: "/Anual" },
+      { price: "250.000", period: "/Anual" },
+      { price: "490.000", period: "/Anual" },
+    ],
+  };
+
+  toggleButtons.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      // Cambiar estado activo
+      toggleButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const tipo = btn.textContent.trim().toLowerCase(); // mensual o anual
+
+      // Cambiar precios en pantalla
+      prices.forEach((priceEl, i) => {
+        const price = priceEl.querySelector(".price");
+        const period = priceEl.querySelector(".period");
+        price.textContent = planData[tipo][i].price;
+        period.textContent = planData[tipo][i].period;
+      });
+    });
+  });
+});
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".testimonial-card");

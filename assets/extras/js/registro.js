@@ -1,5 +1,6 @@
 // === Variables ===
 const form = document.getElementById('form-registro');
+const carrusel = document.getElementById('carouselRegistro');
 let usuarios = [];
 
 // === Cargar usuarios.json si existe ===
@@ -65,3 +66,13 @@ form.addEventListener('submit', e => {
 function guardarLocalmente(data) {
   localStorage.setItem('usuariosRegistrados', JSON.stringify(data));
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var myCarousel = document.querySelector('#carouselRegistro');
+  var carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 4000,
+    ride: 'carousel',
+    pause: false,
+    wrap: true
+  });
+});

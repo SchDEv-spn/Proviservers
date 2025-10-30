@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/extras/css/registro.css">
 </head>
 <body>
@@ -31,14 +33,37 @@
 
     <!-- Columna derecha -->
     <div class="columna derecha">
-      <div class="contenido-derecha">
-        <h2>¡Comienza ahora y encuentra<br>soluciones o nuevas oportunidades!</h2>
-        <img src="/assets/img/registro/women with tab 2.png" alt="Imagen persona" class="imagen-persona">
+      <!-- CARRUSEL DE BOOTSTRAP -->
+      <div id="carouselRegistro" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active" data-bs-interval="4000">
+            <div class="contenido-derecha">
+              <h2>¡Comienza ahora y encuentra<br>soluciones o nuevas oportunidades!</h2>
+              <img src="/assets/img/registro/women with tab 2.png" alt="Imagen persona" class="imagen-persona">
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item" data-bs-interval="4000">
+            <div class="contenido-derecha">
+              <h2>¡Conecta con los mejores<br>profesionales de tu área!</h2>
+              <img src="/assets/img/registro/women with tab 2.png" alt="Imagen persona" class="imagen-persona">
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item" data-bs-interval="4000">
+            <div class="contenido-derecha">
+              <h2>¡Crece tu negocio y encuentra<br>clientes nuevos cada día!</h2>
+              <img src="/assets/img/registro/women with tab 2.png" alt="Imagen persona" class="imagen-persona">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/extras/js/registro.js"></script>
 
 </body>

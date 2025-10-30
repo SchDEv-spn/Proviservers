@@ -18,13 +18,16 @@
 
 <body>
     <header>
-        <!-- Navbar / Logo / hero -->
+        <div class="header-container">
+            <img src="../assets/img/logos/LOGO PRINCIPAL.png" alt="Proviservers - Plataforma de servicios locales"
+                class="header-logo">
+        </div>
     </header>
 
     <main>
         <div class="custom-container">
             <section id="login">
-                <h1>LOGIN</h1>
+                <h1>Inicia Sesión</h1>
                 <p>Accede a tu cuenta para encontrar o fofrecer servicios locales</p>
                 <form id="loginForm">
                     <div class="form-group">
@@ -48,11 +51,39 @@
                 </div>
             </section>
             <section class="info-section">
-                <div class="info-card">
-                    <h2>Te esperan <br> trabajos muy <br> buenos ! <br> Inicia sesion <br> ahora</h2>
-                </div>
-                <div class="image-container">
-                    <img src="../assets/extras/img/women with tab 1.png" alt="Plataforma de trabajo" class="info-image">
+                <div id="infoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <!-- Slide 1: Imagen 1 -->
+                        <div class="carousel-item active">
+                            <div class="carousel-image-container">
+                                <img src="../assets/extras/img/carrousel-login/1.jpg" alt="Plataforma de trabajo"
+                                    class="carousel-image">
+                            </div>
+                        </div>
+                        <!-- Slide 2: Texto 1 -->
+                        <div class="carousel-item">
+                            <div class="carousel-text-container">
+                                <div class="text-card">
+                                    <h2>Te esperan <br> trabajos muy <br> buenos ! <br> Inicia sesión <br> ahora</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3: Imagen 2 -->
+                        <div class="carousel-item">
+                            <div class="carousel-image-container">
+                                <img src="../assets/extras/img/carrousel-login/2.jpg" alt="Profesionales"
+                                    class="carousel-image">
+                            </div>
+                        </div>
+                        <!-- Slide 4: Texto 2 -->
+                        <div class="carousel-item">
+                            <div class="carousel-text-container">
+                                <div class="text-card">
+                                    <h2>Conectamos <br> talento con <br> oportunidades <br> en tu zona</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

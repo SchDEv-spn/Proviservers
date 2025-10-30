@@ -6,5 +6,5 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     // Por ahora, solo redireccionamos
     
     // Redireccionar a dashboard
-    window.location.href = '/Proviservers/dashboard/admin/dashboardAdmin.html';
+    window.location.href = '/Proviservers/dashBoard/admin/dashboardAdmin.html';
 });

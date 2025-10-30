@@ -672,60 +672,43 @@ body {
   display: none;
 }
 
-/* ======== SIDEBAR PLEGABLE (actualizado para mantener el mismo estilo) ======== */
+/* ======== SIDEBAR PLEGABLE ======== */
 .sidebar {
   width: 260px;
   transition: width 0.3s ease;
   overflow: hidden;
 }
 
-/* Modo plegado — mantiene la misma apariencia visual */
 .sidebar.plegado {
-  width: 260px; /* igual que expandida */
+  width: 80px;
 }
 
-/* No se oculta ningún texto ni ícono */
+/* Oculta textos cuando está plegado */
 .sidebar.plegado .menu-principal a,
 .sidebar.plegado .menu-secundario a,
 .sidebar.plegado .menu-footer a {
-  text-align: left;
+  text-align: center;
 }
 
+.sidebar.plegado .menu-principal a::after,
+.sidebar.plegado .menu-secundario a::after {
+  display: none;
+}
+
+/* Oculta los textos, deja los íconos */
 .sidebar.plegado a span {
-  display: inline;
+  display: none;
 }
 
+/* íconos opcionales, si los agregas luego */
 .sidebar a i {
   margin-right: 10px;
   transition: all 0.3s ease;
 }
 
 .sidebar.plegado a i {
-  margin-right: 10px;
+  margin: 0;
 }
-
-/* Mantiene logos igual */
-.sidebar .logo-favicon {
-  display: none;
-}
-
-.sidebar .logo-completo {
-  display: block;
-}
-
-.sidebar.plegado .logo-completo {
-  display: block;
-}
-
-.sidebar.plegado .logo-favicon {
-  display: none;
-}
-
-/* Ocultar botón de despliegue en modo plegado */
-.sidebar.plegado .toggle-submenu {
-  display: none;
-}
-
 
 /* ======== BOTÓN DE TOGGLE ======== */
 .btn-toggle {
@@ -741,6 +724,51 @@ body {
 .btn-toggle:hover {
   transform: scale(1.1);
 }
+
+/* Estado normal (sidebar expandido) */
+.sidebar .logo-favicon {
+  display: none;
+}
+
+.sidebar .logo-completo {
+  display: block;
+}
+
+/* Estado plegado */
+.sidebar.plegado .logo-completo {
+  display: none;
+}
+
+.sidebar.plegado .logo-favicon {
+  display: block;
+  width: 40px; /* o el tamaño que desees */
+  margin: 0 auto;
+}
+
+/* ===== CENTRADO DE ICONOS EN MODO PLEGADO ===== */
+.sidebar.plegado .menu-principal a,
+.sidebar.plegado .menu-secundario a,
+.sidebar.plegado .menu-footer a {
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.sidebar.plegado .menu-principal a i,
+.sidebar.plegado .menu-secundario a i,
+.sidebar.plegado .menu-footer a i {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.sidebar.plegado .menu-principal a:hover,
+.sidebar.plegado .menu-secundario a:hover,
+.sidebar.plegado .menu-footer a:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 12px;
+  transform: none;
+}
+
 
 
 /* 9. Responsive Tablet */

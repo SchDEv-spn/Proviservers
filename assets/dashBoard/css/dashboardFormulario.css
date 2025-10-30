@@ -876,6 +876,31 @@ body {
   margin: 0 auto;
 }
 
+/* ===== CENTRADO DE ICONOS EN MODO PLEGADO ===== */
+.sidebar.plegado .menu-principal a,
+.sidebar.plegado .menu-secundario a,
+.sidebar.plegado .menu-footer a {
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.sidebar.plegado .menu-principal a i,
+.sidebar.plegado .menu-secundario a i,
+.sidebar.plegado .menu-footer a i {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.sidebar.plegado .menu-principal a:hover,
+.sidebar.plegado .menu-secundario a:hover,
+.sidebar.plegado .menu-footer a:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 12px;
+  transform: none;
+}
+
+
 
 /* 9. Responsive Tablet */
 @media screen and (min-width:768px) and (max-width:1080px) {

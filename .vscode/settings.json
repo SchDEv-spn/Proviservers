@@ -1,0 +1,11 @@
+{
+    "editor.language.colorizedBracketPairs": [
+        
+    ],
+    "vscode_vibrancy.opacity": 0.5,
+    "vscode_vibrancy.preferedLightTheme": "Paradise Smoked Glass",
+    "vscode_vibrancy.theme": "Solarized Dark+",
+    "vscode_vibrancy.disableFramelessWindow": false,
+    "vscode_vibrancy.preferedDarkTheme": "Solarized Dark+",
+    "vscode_vibrancy.type": "fullscreen-ui"
+}

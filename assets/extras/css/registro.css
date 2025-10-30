@@ -1,4 +1,4 @@
-/* RESET */
+/* === RESET GENERAL === */
 * {
   margin: 0;
   padding: 0;
@@ -6,117 +6,202 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* CONTENEDOR GENERAL */
-#contenedor {
+/* === BODY (centrado en pantalla) === */
+body {
+  background-color: #f5f5f5;
   display: flex;
-  height: 100vh; /* evita el scroll */
-  overflow: hidden; /* bloquea el desplazamiento */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-/* COLUMNA IZQUIERDA */
+/* === CONTENEDOR PRINCIPAL === */
+#contenedor {
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
+  height: 600px;
+  background-color: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* === COLUMNA IZQUIERDA === */
 .columna.izquierda {
   flex: 1;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 90px;
+  padding: 30px 60px;
 }
 
 .columna.izquierda h1 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-size: 2.3rem;
-  margin-bottom: 15px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-align: center;
 }
 
 .columna.izquierda p {
-  color: #444;
-  margin-bottom: 30px;
-  line-height: 1.6;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
+/* === FORMULARIO === */
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 5px;
+  margin-bottom: -11px;
 }
 
 input {
-  padding: 15px;
+  padding: 12px 16px;
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: #f3f1ff;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   outline: none;
+  transition: background-color 0.2s;
+}
+
+input:focus {
+  background-color: #ebe8ff;
+}
+
+input::placeholder {
+  color: #999;
 }
 
 button {
-  background: linear-gradient(90deg,#0066ff, #0F0F0F);
-  color: #fff;
-  font-weight: 700;
+  background: linear-gradient(90deg, #0066ff, #0F0F0F);
   border: none;
-  border-radius: 25px;
-  padding: 15px 0;
-  margin-top: 10px;
+  padding: 13px 35px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
   cursor: pointer;
-  box-shadow: 0px 5px 12px rgba(0, 102, 255, 0.3);
-  transition: 0.3s;
+  transition: transform 0.3s;
+  margin-top: 10px;
+  width: fit-content;
+  align-self: center;
 }
 
 button:hover {
   transform: translateY(-2px);
 }
 
+/* === TEXTO DE LOGIN === */
 .login-text {
-  margin-top: 20px;
+  margin-top: 18px;
   text-align: center;
-  font-size: 0.9rem;
-  color: #333;
+  font-size: 0.87rem;
+  color: #666;
 }
 
 .login-text a {
-  font-weight: bold;
-  color: #000;
+  font-weight: 600;
+  color: #0066ff;
   text-decoration: none;
 }
 
-/* COLUMNA DERECHA */
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+/* === COLUMNA DERECHA === */
 .columna.derecha {
-  flex: 1;
+  flex: 1.4;
   background: url("/assets/img/registro/Rectangle 8.png") no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
+/* === TARJETA DE TEXTO === */
 .contenido-derecha {
-    text-align: left;
-    color: #fff;
-    max-width: 400px;
-    padding: 288px 30px 0 30px;
-    background: rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    position: relative;
-    top: -40px;
+  position: absolute;
+  left: 134px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 20px 33px;
+  border-radius: 20px;
+  color: #fff;
+  max-width: 350px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  min-height: 312px;
+  display: flex;
+  align-items: flex-start;
 }
+
 .contenido-derecha h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 1.4rem;
-    line-height: 1.4;
-    margin: 0;
-    position: relative;
-    top: -258px;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
 }
 
-
-
-/* Imagen persona */
+/* === IMAGEN PERSONA === */
 .imagen-persona {
   position: absolute;
-  bottom: 0;
-  right: -89px;;
-  width: 290px;
+  bottom: 2px;
+  right: -73px;
+  width: 206px;
+}
+
+/* === ESTILOS DEL CARRUSEL === */
+#carouselRegistro {
+  width: 100%;
+  height: 100%;
+}
+
+#carouselRegistro .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+#carouselRegistro .carousel-item {
+  width: 100%;
+  height: 100%;
+  background: url("/assets/img/registro/Rectangle 8.png") no-repeat center center/cover;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  #contenedor {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .columna.izquierda {
+    padding: 40px;
+  }
+
+  .columna.derecha {
+    min-height: 400px;
+  }
+
+  .contenido-derecha {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .imagen-persona {
+    position: relative;
+    right: 0;
+    width: 250px;
+    margin-top: 20px;
+  }
 }

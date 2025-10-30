@@ -878,37 +878,43 @@ a:focus {
 
 /* Botones */
 .btn-plan {
-  font-family: var(--font-text);
-  font-size: var(--fs-text);
   font-weight: 500;
   padding: 20px 40px;
-  border: none;
+  border: 1px solid var(--dark-color);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
   text-align: center;
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--white-color);
-}
-
-.btn-primary:hover {
-  background-color: #0052cc;
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
+  display: inline-block;
+  text-decoration: none;
   background-color: transparent;
   color: var(--dark-color);
-  border: 1px solid var(--dark-color);
 }
 
-.btn-secondary:hover {
-  background-color: var(--light-gray);
-  transform: translateY(-2px);
+.btn-plan {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn-plan:hover,
+.btn-plan:focus {
+  text-decoration: none;
+}
+
+.btn-plan:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-color: var(--primary-color);
+  text-decoration: none;
+}
+
+.btn-plan:active {
+  background-color: var(--primary-color);
+  border-color: #0d6efd;
+  color: var(--white-color);
+  transform: scale(0.98);
 }
 
 /* ===== TESTIMONIALS SECTION ===== */

@@ -6,5 +6,5 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     // Por ahora, solo redireccionamos
     
     // Redireccionar a dashboard
-    window.location.href = '../../../../dashboard/admin/dashboardAdmin.html';
+    window.location.href = '/../../../dashboard/admin/dashboardAdmin.html';
 });

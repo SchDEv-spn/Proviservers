@@ -769,8 +769,6 @@ body {
   transform: none;
 }
 
-
-
 /* 9. Responsive Tablet */
 @media screen and (min-width:768px) and (max-width:1080px) {
     .sidebar {

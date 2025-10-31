@@ -43,6 +43,16 @@ function mostrarServicios(servicios) {
             <td>${servicio.fecha}</td>
             <td>${servicio.servicio}</td>
             <td><span class="status-badge status-${claseEstado}">${servicio.estado}</span></td>
+            <td>
+                <div class="action-buttons">
+                    <button class="btn-action btn-edit" title="Editar servicio">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button class="btn-action btn-delete" title="Eliminar servicio">
+                        <i class="bi bi-trash3"></i>
+                    </button>
+                </div>
+            </td>
         `;
         tabla.appendChild(fila);
     });

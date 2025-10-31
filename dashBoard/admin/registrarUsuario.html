@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../assets/estilosGenerales/style.css">
 
     <!-- tu css -->
-    <link rel="stylesheet" href="../../assets/dashBoard/css/dashboardFormulario.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/css/registrarUsuario.css">
 </head>
 
 <body>
@@ -40,7 +40,7 @@
                         <i class="bi bi-chevron-down toggle-icon"></i>
                     </button>
                     <ul class="submenu">
-                        <li><a href="registrarServicios.html" class="submenu-link"><i
+                        <li><a href="registrarUsuario.html" class="submenu-link"><i
                                     class="bi bi-plus-circle"></i>Registrar servicio</a></li>
                         <li><a href="consultarServicios.html" class="submenu-link"><i class="bi bi-eye"></i>Consultar
                                 servicios</a></li>
@@ -116,13 +116,19 @@
 
             </div>
         </header>
-        <!--     Secciones -->
+        <!-- Secciones -->
         <!-- titulo -->
-        <section id="titulo-principal">
-            <h1>Agregar Servicio</h1>
-            <p class="text-muted mb-0">
-                Registra nuevos servicios para que los usuarios puedan contratarlos dentro de la plataforma.
-            </p>
+        <section id="titulo-principal" class="d-flex justify-content-between align-items-start flex-wrap">
+            <div>
+                <h1 class="mb-1">Agregar Servicio</h1>
+                <p class="text-muted mb-0">
+                    Registra nuevos servicios para que los usuarios puedan contratarlos dentro de la plataforma.
+                </p>
+            </div>
+
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol id="breadcrumb" class="breadcrumb mb-0"></ol>
+            </nav>
         </section>
 
         <!-- Formualior admin -->
@@ -205,12 +211,6 @@
                                 placeholder="Ej: 3">
                         </div>
 
-                        <!-- Fecha de creación -->
-                        <div class="col-md-6">
-                            <label for="created_at" class="form-label">Fecha de creación</label>
-                            <input type="date" class="form-control" id="created_at" name="created_at" required>
-                        </div>
-
                         <!-- Botón -->
                         <div class="text-center mt-3">
                             <button type="submit" class="btn btn-primary px-4">Agregar Servicio</button>
@@ -239,6 +239,7 @@
 
     <!-- tu javaScript -->
     <script src="../../assets/dashBoard/js/dashboard.js"></script>
+    <script src="../../assets/dashBoard/js/main.js"></script>
 </body>
 
 </html>

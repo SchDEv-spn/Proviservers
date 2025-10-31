@@ -532,7 +532,6 @@ body {
     font-family: var(--font-text);
     cursor: pointer;
     transition: all 0.25s ease;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
     min-width: 200px;
 }
@@ -915,7 +914,6 @@ body {
   border-radius: 12px;
   transform: none;
 }
-
 
 
 /* 9. Responsive Tablet */

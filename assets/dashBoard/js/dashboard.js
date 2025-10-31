@@ -140,6 +140,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+new DataTable('#tabla-1', {
+    layout: {
+        topStart: {
+            buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+        }
+    }
+});
+
+
 
 
 

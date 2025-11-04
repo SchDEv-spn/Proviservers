@@ -14,6 +14,54 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".navbar .nav-link");
+  const navbarHeight = document.querySelector(".navbar").offsetHeight;
+
+  function updateActiveLink() {
+    let index = sections.length;
+
+    while (--index && window.scrollY + navbarHeight < sections[index].offsetTop) {}
+    
+    navLinks.forEach((link) => link.classList.remove("active"));
+    const activeLink = document.querySelector(`.navbar .nav-link[href="#${sections[index].id}"]`);
+    if (activeLink) activeLink.classList.add("active");
+  }
+
+  updateActiveLink();
+  window.addEventListener("scroll", updateActiveLink);
+
+  // Scroll suave
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+      if (!target) return;
+
+      window.scrollTo({
+        top: target.offsetTop - navbarHeight,
+        behavior: "smooth",
+      });
+    });
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".hero-carousel img");
+  let current = 0;
+
+  function changeImage() {
+    images[current].classList.remove("active");
+    current = (current + 1) % images.length;
+    images[current].classList.add("active");
+  }
+
+  setInterval(changeImage, 5000); // cambia cada 5 segundos
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
   const toggleButtons = document.querySelectorAll(".toggle-btn");
   const prices = document.querySelectorAll(".plan-price");
 

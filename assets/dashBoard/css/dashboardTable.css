@@ -975,6 +975,25 @@ table:hover {
   transform: none;
 }
 
+/* Estilo normal */
+div.dt-buttons > .dt-button,
+div.dt-buttons > div.dt-button-split .dt-button {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%) ;
+    color: var(--white-color);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-text);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Hover (al pasar el mouse) */
+div.dt-buttons .dt-button:hover,
+div.dt-buttons .dt-button-split .dt-button:hover {
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3) !important;
+}
 
 
 /* 9. Responsive Tablet */

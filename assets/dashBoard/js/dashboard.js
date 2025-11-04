@@ -142,22 +142,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     // Cargar el JSON de servicios
-    fetch("../../../assets/data/servicios.json")
+    fetch("../../../assets/data/usuarios.json")
         .then(res => res.json())
         .then(data => {
             // Generar filas HTML dinámicamente
             const tbody = document.getElementById("tabla-servicios");
-            tbody.innerHTML = data.map(servicio => `
+            tbody.innerHTML = data.map(usuario => `
                 <tr>
-                    <td>${servicio.id}</td>
-                    <td>${servicio.usuario}</td>
-                    <td>${servicio.direccion}</td>
-                    <td>${servicio.fecha}</td>
-                    <td>${servicio.servicio}</td>
-                    <td>${servicio.estado}</td>
+                    <td>${usuario.id}</td>
+                    <td>${usuario.nombre}</td>
+                    <td>${usuario.email}</td>
+                    <td>${usuario.telefono}</td>
+                    <td>${usuario.ubicacion}</td>
+                    <td>${usuario.rol}</td>
                     <td>
-                        <button class="btn btn-sm btn-primary">Ver</button>
-                        <button class="btn btn-sm btn-danger">Eliminar</button>
+                        <div class="action-buttons">
+                            <button class="btn-action btn-edit" title="Editar usuario">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="btn-action btn-delete" title="Eliminar usuario">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </div>
                     </td>
                 </tr>
             `).join("");
@@ -173,7 +179,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 },
                 language: {
-                    search: "Buscar:",
+                    search: "",                 // Oculta el texto "Buscar:"
+                    searchPlaceholder: "Buscar", // Agrega placeholder
                     lengthMenu: "Mostrar _MENU_ registros",
                     info: "Mostrando _START_ a _END_ de _TOTAL_ registros",
                     infoEmpty: "Mostrando 0 a 0 de 0 registros",
@@ -192,8 +199,34 @@ document.addEventListener("DOMContentLoaded", () => {
                         pdf: "Exportar PDF",
                         print: "Imprimir"
                     }
+                },
+                initComplete: function () {
+                    // Al terminar la inicialización, personalizamos el buscador
+                    const dtSearch = document.querySelector('.dt-search');
+                    if (!dtSearch) return;
+
+                    const input = dtSearch.querySelector('input[type="search"]');
+                    if (!input) return;
+
+                    // Crear contenedor buscador con ícono
+                    const buscadorDiv = document.createElement('div');
+                    buscadorDiv.className = 'buscador';
+                    buscadorDiv.innerHTML = `<i class="bi bi-search"></i>`;
+                    buscadorDiv.appendChild(input);
+
+                    // Limpiar contenido original y poner el nuevo buscador
+                    dtSearch.innerHTML = '';
+                    dtSearch.appendChild(buscadorDiv);
+
+                    // Ajustar atributos del input para que quede limpio y usable
+                    input.setAttribute('placeholder', 'Buscar');
+                    input.style.width = "100%";
+                    input.style.border = "none";
+                    input.style.background = "transparent";
+                    input.style.outline = "none";
                 }
             });
+
         })
         .catch(err => console.error("Error al cargar el JSON:", err));
 });

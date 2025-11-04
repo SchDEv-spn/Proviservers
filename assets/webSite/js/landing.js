@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".hero-carousel img");
+  let current = 0;
+
+  function changeImage() {
+    images[current].classList.remove("active");
+    current = (current + 1) % images.length;
+    images[current].classList.add("active");
+  }
+
+  setInterval(changeImage, 5000); // cambia cada 5 segundos
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const navbarCollapse = document.getElementById("navbarNav");
   const navList = navbarCollapse.querySelector(".navbar-nav");

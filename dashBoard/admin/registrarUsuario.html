@@ -132,95 +132,80 @@
         </section>
 
         <!-- Formualior admin -->
-        <section id="formulario">
-            <!-- foto admin -->
+        <section id="formulario-usuarios">
             <div class="contenedor-formulario">
-                <!-- Sección Foto de Perfil -->
+                <!-- Foto de perfil -->
                 <div class="seccion-foto">
                     <div class="tarjeta-foto">
                         <div class="foto-perfil">
-                            <img src="../../assets/dashBoard/img/foto-nuevo-admin.png" alt="Foto de perfil"
+                            <img src="../../assets/dashBoard/img/default-user.png" alt="Foto de perfil"
                                 id="foto-preview">
                         </div>
-                        <label for="foto-input" class="btn-agregar-foto">
-                            Agregar foto
-                        </label>
+                        <label for="foto-input" class="btn-agregar-foto">Agregar foto</label>
                         <input type="file" id="foto-input" accept="image/*" style="display: none;">
                     </div>
                 </div>
 
                 <!-- Formulario -->
-                <form action="#" method="post">
+                <form action="#" method="post" class="formulario-usuario">
                     <div class="row g-3">
 
-                        <!-- ID del proveedor -->
+                        <!-- Nombre -->
                         <div class="col-md-6">
-                            <label for="proveedor_id" class="form-label">Proveedor</label>
-                            <input type="number" class="form-control" id="proveedor_id" name="proveedor_id"
-                                placeholder="Ej: 12" required>
-                        </div>
-
-                        <!-- Nombre del servicio -->
-                        <div class="col-md-6">
-                            <label for="nombre" class="form-label">Nombre del servicio</label>
+                            <label for="nombre" class="form-label">Nombre completo</label>
                             <input type="text" class="form-control" id="nombre" name="nombre"
-                                placeholder="Ej: Limpieza de hogar" required>
+                                placeholder="Ej: Juan Pérez" required>
                         </div>
 
-                        <!-- Descripción -->
-                        <div class="col-md-12">
-                            <label for="descripcion" class="form-label">Descripción</label>
-                            <textarea class="form-control" id="descripcion" name="descripcion" rows="3"
-                                placeholder="Describe brevemente el servicio..." required></textarea>
-                        </div>
-
-                        <!-- Precio -->
+                        <!-- Email -->
                         <div class="col-md-6">
-                            <label for="precio" class="form-label">Precio</label>
-                            <input type="number" class="form-control" id="precio" name="precio" placeholder="Ej: 50000"
-                                min="0" required>
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Ej: juan@gmail.com" required>
                         </div>
 
-                        <!-- Categoría -->
+                        <!-- Contraseña -->
                         <div class="col-md-6">
-                            <label for="categoria" class="form-label">Categoría</label>
-                            <select class="form-select" id="categoria" name="categoria" required>
+                            <label for="clave" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="clave" name="clave" placeholder="••••••••"
+                                required>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" name="telefono"
+                                placeholder="Ej: 3204567890" required>
+                        </div>
+
+                        <!-- Ubicación -->
+                        <div class="col-md-6">
+                            <label for="ubicacion" class="form-label">Ubicación</label>
+                            <input type="text" class="form-control" id="ubicacion" name="ubicacion"
+                                placeholder="Ej: Fusagasugá, Cundinamarca" required>
+                        </div>
+
+                        <!-- Rol -->
+                        <div class="col-md-6">
+                            <label for="rol" class="form-label">Rol</label>
+                            <select class="form-select" id="rol" name="rol" required>
                                 <option value="">Seleccionar...</option>
-                                <option value="limpieza">Limpieza</option>
-                                <option value="electricidad">Electricidad</option>
-                                <option value="fontaneria">Fontanería</option>
-                                <option value="tecnologia">Tecnología</option>
-                                <option value="otros">Otros</option>
+                                <option value="admin">Administrador</option>
+                                <option value="proveedor">Proveedor</option>
+                                <option value="cliente">Cliente</option>
                             </select>
-                        </div>
-
-                        <!-- Disponibilidad -->
-                        <div class="col-md-6">
-                            <label for="disponibilidad" class="form-label">Disponibilidad</label>
-                            <select class="form-select" id="disponibilidad" name="disponibilidad" required>
-                                <option value="">Seleccionar...</option>
-                                <option value="disponible">Disponible</option>
-                                <option value="no_disponible">No disponible</option>
-                            </select>
-                        </div>
-
-                        <!-- Promoción -->
-                        <div class="col-md-6">
-                            <label for="promocion_id" class="form-label">Promoción</label>
-                            <input type="number" class="form-control" id="promocion_id" name="promocion_id"
-                                placeholder="Ej: 3">
                         </div>
 
                         <!-- Botón -->
                         <div class="text-center mt-3">
-                            <button type="submit" class="btn btn-primary px-4">Agregar Servicio</button>
+                            <button type="submit" class="btn btn-primary px-4">Agregar Usuario</button>
                         </div>
 
                     </div>
                 </form>
-
-
+            </div>
         </section>
+
 
     </main>
 

@@ -30,7 +30,7 @@
         <nav class="menu-principal">
             <ul>
                 <li><a href="dashboardProveedor.html" data-title="Dashboard"><i class="bi bi-house-door"></i><span>Panel Principal</span></a></li>
-                <li><a href="misServicios.html" class="active" data-title="Mis Servicios"><i class="bi bi-briefcase"></i><span>Mis Servicios</span></a></li>
+                <li><a href="registrar-servicio.html" class="active" data-title="Mis Servicios"><i class="bi bi-briefcase"></i><span>Mis Servicios</span></a></li>
                 <li class="has-submenu">
                     <a href="#" data-title="Solicitudes" class="menu-link">
                         <i class="bi bi-envelope"></i><span>Solicitudes</span>
@@ -120,6 +120,20 @@
         <!-- Formulario de Servicios -->
         <section id="formulario">
             <div class="contenedor-formulario">
+                <!-- Sección Foto del Servicio -->
+                <div class="seccion-foto">
+                    <div class="tarjeta-foto">
+                        <div class="foto-servicio">
+                            <img src="../../assets/dashBoard/img/imagen-servicio.png" alt="Imagen del servicio"
+                                id="foto-preview">
+                        </div>
+                        <label for="foto-input" class="btn-agregar-foto">
+                            <i class="bi bi-camera"></i> Agregar imagen
+                        </label>
+                        <input type="file" id="foto-input" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+
                 <!-- Formulario -->
                 <form action="/api/servicios/guardar" method="post" id="form-servicio">
                     <div class="row g-3">
@@ -243,7 +257,7 @@
         crossorigin="anonymous"></script>
 
     <!-- JavaScript del formulario -->
-    <script src="../../assets/dashBoard/js/mis-servicios.js"></script>
+    <script src="../../assets/dashBoard/js/registrar-servicio.js"></script>
 </body>
 
 </html>

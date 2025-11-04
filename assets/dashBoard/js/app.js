@@ -3,15 +3,15 @@ const tabla = document.querySelector("#tabla-1 tbody");
 let servicios = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("../../../assets/data/servicios.json")
+    fetch("../../../assets/data/usuarios.json")
 
         .then(response => response.json())
 
         .then(data => {
-            servicios = data;
+            usuarios = data;
 
             // Funciones futuras
-            mostrarServicios(servicios)
+            mostrarUsuarios(usuarios)
         })
 
         .catch(error => {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
 })
 
-function mostrarServicios(servicios) {
+function mostrarUsuarios(usuarios) {
 
     if (!tabla) return;
 
@@ -32,27 +32,29 @@ function mostrarServicios(servicios) {
         "Pendiente": "pending"
     }
 
-    // Recorrer los servicios y crear filas dinámicamente
-    servicios.forEach(servicio => {
-        const claseEstado = estadoClase[servicio.estado] || "pending";
+    // Recorrer los usuarios y crear filas dinámicamente
+    usuarios.forEach(usuario => {
+        const claseEstado = estadoClase[usuario.estado] || "pending";
         const fila = document.createElement("tr");
         fila.innerHTML = `
-            <td>${servicio.id}</td>
-            <td>${servicio.usuario}</td>
-            <td>${servicio.direccion}</td>
-            <td>${servicio.fecha}</td>
-            <td>${servicio.servicio}</td>
-            <td><span class="status-badge status-${claseEstado}">${servicio.estado}</span></td>
-            <td>
-                <div class="action-buttons">
-                    <button class="btn-action btn-edit" title="Editar servicio">
-                        <i class="bi bi-pencil-square"></i>
-                    </button>
-                    <button class="btn-action btn-delete" title="Eliminar servicio">
-                        <i class="bi bi-trash3"></i>
-                    </button>
-                </div>
-            </td>
+                <tr>
+                    <td>${usuario.id}</td>
+                    <td>${usuario.nombre}</td>
+                    <td>${usuario.email}</td>
+                    <td>${usuario.telefono}</td>
+                    <td>${usuario.ubicacion}</td>
+                    <td><span class="status-badge status-${usuario.rol.toLowerCase()}">${usuario.rol}</span></td>
+                    <td>
+                        <div class="action-buttons text-center">
+                            <button class="btn-action btn-edit" title="Editar usuario">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="btn-action btn-delete" title="Eliminar usuario">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
         `;
         tabla.appendChild(fila);
     });

@@ -268,7 +268,7 @@ body {
     border-radius: 30px;
     padding: 10px 20px;
     width: 400px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #cbd5e1;
     transition: all 0.25s ease;
 }
 
@@ -975,25 +975,73 @@ table:hover {
   transform: none;
 }
 
-/* Estilo normal */
 div.dt-buttons > .dt-button,
 div.dt-buttons > div.dt-button-split .dt-button {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%) ;
+    background-color: var(--primary-color);
     color: var(--white-color);
     border: none;
     border-radius: 8px;
     font-family: var(--font-text);
+    font-size: var(--fs-text);
     cursor: pointer;
     transition: all 0.25s ease;
 }
 
 /* Hover (al pasar el mouse) */
-div.dt-buttons .dt-button:hover,
-div.dt-buttons .dt-button-split .dt-button:hover {
-    background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%) !important;
+div.dt-buttons > .dt-button:hover,
+div.dt-buttons > div.dt-button-split .dt-button:hover {
+    background-color: var(--dark-color) !important;
+    color: var(--white-color);
     transform: translateY(-2px) !important;
     box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3) !important;
 }
+
+.dt-search label {
+    display: none;
+}
+
+/* Contenedor de paginación */
+div.dt-container .dt-paging {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 10px;
+}
+
+/* Botones de paginación */
+div.dt-container .dt-paging .dt-paging-button {
+    background: transparent;     /* Fondo transparente */
+    color: #555;                 /* Gris suave para el texto */
+    border: 1px solid #ccc;      /* Borde muy sutil */
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+/* Botón activo */
+div.dt-container .dt-paging .dt-paging-button.dt-current {
+    background: #f0f0f0;        /* Fondo ligero para resaltar activo */
+    border-color: #bbb;
+    font-weight: 500;
+}
+
+/* Hover de botones */
+div.dt-container .dt-paging .dt-paging-button:hover {
+    background: #e8e8e8;        /* Cambio muy sutil al pasar el mouse */
+    border-color: #aaa;
+}
+
+/* Botones deshabilitados */
+div.dt-container .dt-paging .dt-paging-button:disabled {
+    color: #999;
+    border-color: #ddd;
+    cursor: not-allowed;
+    background: transparent;
+}
+
+
 
 
 /* 9. Responsive Tablet */

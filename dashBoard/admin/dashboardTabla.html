@@ -34,8 +34,8 @@
         <!-- Menú principal -->
         <nav class="menu-principal">
             <ul>
-                <li><a href="dashboardAdmin.html" data-title="Dashboard"><i
-                            class="bi bi-house-door"></i><span>Panel Principal</span></a></li>
+                <li><a href="dashboardAdmin.html" data-title="Dashboard"><i class="bi bi-house-door"></i><span>Panel
+                            Principal</span></a></li>
                 <li><a href="#" data-title="Usuarios"><i class="bi bi-people"></i><span>Usuarios</span></a></li>
 
                 <li class="has-submenu">
@@ -125,21 +125,35 @@
         </header>
         <!--     Secciones -->
         <!-- titulo -->
-        <section id="titulo-principal">
-            <h1>Servicios</h1>
+        <section id="titulo-principal" class="d-flex justify-content-between align-items-start flex-wrap">
+            <div>
+                <h1 class="mb-1">Usuarios</h1>
+                <p class="text-muted mb-0">
+                    Aquí puedes ver todos los usuarios registrados. Usa las acciones disponibles para editar, eliminar o
+                    revisar información de cada usuario.
+                </p>
+            </div>
+
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol id="breadcrumb" class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="dashboardAdmin.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Usuarios</li>
+                </ol>
+            </nav>
         </section>
+
 
         <!-- Tabla arriba -->
         <section id="tabla-arriba">
             <table id="tabla-1" class="display nowrap">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Usuario/Proveedor</th>
-                        <th>Dirección</th>
-                        <th>Fecha</th>
-                        <th>Servicio</th>
-                        <th>Estado</th>
+                        <th>ID</th>
+                        <th>Nombre completo</th>
+                        <th>Correo electrónico</th>
+                        <th>Teléfono</th>
+                        <th>Ubicación</th>
+                        <th>Rol</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -176,6 +190,7 @@
     <!-- tu javaScript -->
     <script src="../../assets/dashBoard/js/dashboard.js"></script>
     <script src="../../assets/dashBoard/js/app.js"></script>
+    <script src="../../assets/dashBoard/js/main.js"></script>
 </body>
 
 </html>

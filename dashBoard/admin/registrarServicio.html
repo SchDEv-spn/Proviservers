@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proviservers | Mis Servicios</title>
+    <title>Proviservers | Plataforma de servicios locales</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
     <!-- css de estilos globales o generales -->
     <link rel="stylesheet" href="../../assets/estilosGenerales/style.css">
+
     <!-- tu css -->
-    <link rel="stylesheet" href="../../assets/dashBoard/css/registrar-servicio.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/css/registrarUsuario.css">
 </head>
 
 <body>
@@ -26,26 +26,32 @@
             </a>
         </div>
 
-        <!-- Menú principal - Adaptado para proveedores -->
+        <!-- Menú principal -->
         <nav class="menu-principal">
             <ul>
-                <li><a href="dashboardProveedor.html" data-title="Dashboard"><i class="bi bi-house-door"></i><span>Panel Principal</span></a></li>
-                <li><a href="misServicios.html" class="active" data-title="Mis Servicios"><i class="bi bi-briefcase"></i><span>Mis Servicios</span></a></li>
+                <li><a href="dashboardAdmin.html" data-title="Dashboard"><i class="bi bi-house-door"></i><span>Panel
+                            Principal</span></a></li>
+                <li><a href="#" data-title="Usuarios"><i class="bi bi-people"></i><span>Usuarios</span></a></li>
                 <li class="has-submenu">
-                    <a href="#" data-title="Solicitudes" class="menu-link">
-                        <i class="bi bi-envelope"></i><span>Solicitudes</span>
+                    <a href="dashboardTabla.html" data-title="Servicios" class="menu-link">
+                        <i class="bi bi-briefcase"></i><span>Servicios</span>
                     </a>
                     <button class="toggle-submenu" aria-label="Mostrar opciones">
                         <i class="bi bi-chevron-down toggle-icon"></i>
                     </button>
                     <ul class="submenu">
-                        <li><a href="#" class="submenu-link"><i class="bi bi-plus-circle"></i>Nuevas solicitudes</a></li>
-                        <li><a href="#" class="submenu-link"><i class="bi bi-clock-history"></i>En proceso</a></li>
-                        <li><a href="#" class="submenu-link"><i class="bi bi-check-circle"></i>Completadas</a></li>
+                        <li><a href="registrarUsuario.html" class="submenu-link"><i
+                                    class="bi bi-plus-circle"></i>Registrar servicio</a></li>
+                        <li><a href="consultarServicios.html" class="submenu-link"><i class="bi bi-eye"></i>Consultar
+                                servicios</a></li>
                     </ul>
                 </li>
-                <li><a href="#" data-title="Reseñas"><i class="bi bi-star"></i><span>Reseñas</span></a></li>
-                <li><a href="#" data-title="Estadísticas"><i class="bi bi-graph-up"></i><span>Estadísticas</span></a></li>
+                <li><a href="#" data-title="Categorías de Servicios"><i class="bi bi-grid"></i><span>Categorías de
+                            Servicios</span></a></li>
+                <li><a href="#" data-title="Reportes"><i
+                            class="bi bi-file-earmark-bar-graph"></i><span>Reportes</span></a></li>
+                <li><a href="#" data-title="Estadísticas"><i class="bi bi-graph-up"></i><span>Estadísticas</span></a>
+                </li>
             </ul>
         </nav>
 
@@ -54,15 +60,18 @@
             <p>Más...</p>
             <ul>
                 <li><a href="#" data-title="Finanzas"><i class="bi bi-cash-stack"></i><span>Finanzas</span></a></li>
-                <li><a href="#" data-title="Calendario"><i class="bi bi-calendar-event"></i><span>Calendario</span></a></li>
+                <li><a href="#" data-title="Calendario"><i class="bi bi-calendar-event"></i><span>Calendario</span></a>
+                </li>
                 <li><a href="#" data-title="Facturación"><i class="bi bi-receipt"></i><span>Facturación</span></a></li>
-                <li><a href="#" data-title="Promociones"><i class="bi bi-megaphone"></i><span>Promociones</span></a></li>
+                <li><a href="#" data-title="Marketing"><i class="bi bi-megaphone"></i><span>Marketing</span></a></li>
+                <li><a href="dashboardFormulario.html" class="active" data-title="Integraciones"><i
+                            class="bi bi-plug"></i><span>Integraciones</span></a></li>
             </ul>
         </nav>
 
         <!-- Footer del menú -->
         <div class="menu-footer">
-            <a href="#" data-title="Configuración"><i class="bi bi-gear"></i><span>Configuración</span></a>
+            <a href="#" data-title="Ajustes"><i class="bi bi-gear"></i><span>Ajustes</span></a>
             <a href="../../extras/inicioSesion.html" data-title="Cerrar Sesión"><i
                     class="bi bi-box-arrow-right"></i><span>Cerrar Sesión</span></a>
         </div>
@@ -79,19 +88,19 @@
             <!--Barra Superior -->
             <div class="buscador">
                 <i class="bi bi-search"></i>
-                <input type="text" placeholder="Buscar servicios...">
+                <input type="text" placeholder="Buscar">
             </div>
             <div class="acciones-barra">
                 <!-- Notificaiones -->
                 <div class="notificaciones item-barra">
                     <i class="bi bi-bell-fill"></i>
-                    <span class="badge">3</span>
+                    <span class="badge">6</span>
                 </div>
 
                 <!-- Idioma -->
                 <div class="idioma item-barra">
                     <img src="../../assets/dashBoard/img/bandera-idioma.png" alt="Foto bandera">
-                    <span>Español</span>
+                    <span>English</span>
                     <i class="bi bi-chevron-down"></i>
                 </div>
 
@@ -99,121 +108,97 @@
                 <a href="dashboardPerfil.html" class="usuario item-barra">
                     <img src="../../assets/dashBoard/img/Foto-usuario.png" alt="Foto usuario">
                     <div class="info-usuario">
-                        <span class="nombre">Carlos Mendoza</span>
-                        <span class="rol">Proveedor</span>
+                        <span class="nombre">Mony Roy</span>
+                        <span class="rol">Admin</span>
                     </div>
                     <i class="bi bi-chevron-down"></i>
                 </a>
 
             </div>
         </header>
-
         <!-- Secciones -->
         <!-- titulo -->
-        <section id="titulo-principal">
-            <h1>Mis Servicios</h1>
-            <p class="text-muted mb-0">
-                Gestiona tus servicios publicados en la plataforma. Agrega nuevos servicios o edita los existentes.
-            </p>
+        <section id="titulo-principal" class="d-flex justify-content-between align-items-start flex-wrap">
+            <div>
+                <h1 class="mb-1">Agregar Servicio</h1>
+                <p class="text-muted mb-0">
+                    Registra nuevos servicios para que los usuarios puedan contratarlos dentro de la plataforma.
+                </p>
+            </div>
+
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol id="breadcrumb" class="breadcrumb mb-0"></ol>
+            </nav>
         </section>
 
-        <!-- Formulario de Servicios -->
-        <section id="formulario">
+        <!-- Formualior admin -->
+        <section id="formulario-usuarios">
             <div class="contenedor-formulario">
+                <!-- Foto de perfil -->
+                <div class="seccion-foto">
+                    <div class="tarjeta-foto">
+                        <div class="foto-perfil">
+                            <img src="../../assets/dashBoard/img/Foto-usuario.png" alt="Foto de perfil"
+                                id="foto-preview">
+                        </div>
+                        <label for="foto-input" class="btn-agregar-foto">Agregar foto</label>
+                        <input type="file" id="foto-input" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+
                 <!-- Formulario -->
-                <form action="/api/servicios/guardar" method="post" id="form-servicio">
+                <form action="#" method="post" class="formulario-usuario">
                     <div class="row g-3">
-                        
-                        <!-- ID del servicio (oculto para nuevos servicios) -->
-                        <input type="hidden" id="servicio_id" name="servicio_id">
 
-                        <!-- Nombre del servicio -->
-                        <div class="col-md-12">
-                            <label for="nombre" class="form-label">Nombre del servicio *</label>
+                        <!-- Nombre -->
+                        <div class="col-md-6">
+                            <label for="nombre" class="form-label">Nombre completo</label>
                             <input type="text" class="form-control" id="nombre" name="nombre"
-                                placeholder="Ej: Reparación de tuberías residenciales" required maxlength="100">
-                            <div class="form-text">Máximo 100 caracteres</div>
+                                placeholder="Ej: Juan Pérez" required>
                         </div>
 
-                        <!-- Descripción -->
-                        <div class="col-md-12">
-                            <label for="descripcion" class="form-label">Descripción</label>
-                            <textarea class="form-control" id="descripcion" name="descripcion" rows="4"
-                                placeholder="Describe detalladamente en qué consiste tu servicio, materiales que utilizas, tiempo estimado, etc."></textarea>
-                            <div class="form-text">
-                                <span id="contador-descripcion">0</span> caracteres
-                            </div>
-                        </div>
-
-                        <!-- Precio -->
+                        <!-- Email -->
                         <div class="col-md-6">
-                            <label for="precio" class="form-label">Precio ($)</label>
-                            <div class="input-group">
-                                <span class="input-group-text">$</span>
-                                <input type="number" class="form-control" id="precio" name="precio" 
-                                    placeholder="0.00" step="0.01" min="0" max="99999999.99">
-                            </div>
-                            <div class="form-text">Formato: 99999999.99</div>
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Ej: juan@gmail.com" required>
                         </div>
 
-                        <!-- Categoría -->
+                        <!-- Contraseña -->
                         <div class="col-md-6">
-                            <label for="categoria" class="form-label">Categoría *</label>
-                            <select class="form-select" id="categoria" name="categoria" required>
-                                <option value="">Seleccionar categoría...</option>
-                                <option value="plomeria">Plomería</option>
-                                <option value="electricidad">Electricidad</option>
-                                <option value="pintura">Pintura</option>
-                                <option value="carpinteria">Carpintería</option>
-                                <option value="limpieza">Limpieza</option>
-                                <option value="jardineria">Jardinería</option>
-                                <option value="mecanica">Mecánica</option>
-                                <option value="tecnologia">Tecnología</option>
-                                <option value="otros">Otros</option>
+                            <label for="clave" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="clave" name="clave" placeholder="••••••••"
+                                required>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" name="telefono"
+                                placeholder="Ej: 3204567890" required>
+                        </div>
+
+                        <!-- Ubicación -->
+                        <div class="col-md-6">
+                            <label for="ubicacion" class="form-label">Ubicación</label>
+                            <input type="text" class="form-control" id="ubicacion" name="ubicacion"
+                                placeholder="Ej: Fusagasugá, Cundinamarca" required>
+                        </div>
+
+                        <!-- Rol -->
+                        <div class="col-md-6">
+                            <label for="rol" class="form-label">Rol</label>
+                            <select class="form-select" id="rol" name="rol" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="admin">Administrador</option>
+                                <option value="proveedor">Proveedor</option>
+                                <option value="cliente">Cliente</option>
                             </select>
                         </div>
 
-                        <!-- Disponibilidad -->
-                        <div class="col-md-6">
-                            <label class="form-label">Disponibilidad *</label>
-                            <div class="disponibilidad-opciones">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="disponibilidad" id="disponible" value="1" checked>
-                                    <label class="form-check-label" for="disponible">
-                                        <i class="bi bi-check-circle-fill text-success"></i> Disponible
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="disponibilidad" id="no-disponible" value="0">
-                                    <label class="form-check-label" for="no-disponible">
-                                        <i class="bi bi-x-circle-fill text-danger"></i> No disponible
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Promoción -->
-                        <div class="col-md-6">
-                            <label for="promocion_id" class="form-label">Promoción activa</label>
-                            <select class="form-select" id="promocion_id" name="promocion_id">
-                                <option value="">Sin promoción</option>
-                                <option value="1">Descuento 20% - Noviembre</option>
-                                <option value="2">2x1 - Servicios Básicos</option>
-                                <option value="3">Primera vez - 15% OFF</option>
-                                <option value="4">Pack Familiar - 30% OFF</option>
-                            </select>
-                        </div>
-
-                        <!-- Botones -->
-                        <div class="col-12 mt-4">
-                            <div class="d-flex gap-2 justify-content-end">
-                                <button type="button" class="btn btn-secondary" id="btn-cancelar">
-                                    <i class="bi bi-arrow-left"></i> Volver
-                                </button>
-                                <button type="submit" class="btn btn-primary" id="btn-guardar">
-                                    <i class="bi bi-check-circle"></i> Guardar Servicio
-                                </button>
-                            </div>
+                        <!-- Botón -->
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-primary px-4">Agregar Usuario</button>
                         </div>
 
                     </div>
@@ -221,29 +206,25 @@
             </div>
         </section>
 
-        <!-- Lista de Servicios (sección adicional) -->
-        <section id="lista-servicios" class="mt-5">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2>Servicios Registrados</h2>
-                <button class="btn btn-outline-primary" id="btn-ver-lista">
-                    <i class="bi bi-list"></i> Ver todos los servicios
-                </button>
-            </div>
-            
-            <div class="row" id="servicios-grid">
-                <!-- Los servicios se cargarán aquí dinámicamente -->
-            </div>
-        </section>
 
     </main>
+
+
+    <footer>
+        <!-- Enlaces / Información -->
+    </footer>
+
+    <!-- apexcharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <!-- JavaScript del formulario -->
-    <script src="../../assets/dashBoard/js/mis-servicios.js"></script>
+    <!-- tu javaScript -->
+    <script src="../../assets/dashBoard/js/dashboard.js"></script>
+    <script src="../../assets/dashBoard/js/main.js"></script>
 </body>
 
 </html>

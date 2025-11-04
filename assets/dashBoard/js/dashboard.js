@@ -1,41 +1,41 @@
-/*Primera grafica */    
+/*Primera grafica */
 
 var options = {
-  chart: {
-    type: 'area',
-    height: 350,
-    toolbar: { show: false }
-  },
-  colors: ['#0066ff', '#0e1116'], // Azul y gris oscuro
-  dataLabels: { enabled: false },
-  stroke: { curve: 'smooth' },
-  series: [
-    {
-      name: 'Servicios publicados',
-      data: [20, 35, 28, 27, 55, 30, 90, 50, 65, 28, 60, 20]
+    chart: {
+        type: 'area',
+        height: 350,
+        toolbar: { show: false }
     },
-    {
-      name: 'Servicios contratados',
-      data: [20, 70, 40, 30, 50, 50, 30, 55, 40, 35, 90, 25]
+    colors: ['#0066ff', '#0e1116'], // Azul y gris oscuro
+    dataLabels: { enabled: false },
+    stroke: { curve: 'smooth' },
+    series: [
+        {
+            name: 'Servicios publicados',
+            data: [20, 35, 28, 27, 55, 30, 90, 50, 65, 28, 60, 20]
+        },
+        {
+            name: 'Servicios contratados',
+            data: [20, 70, 40, 30, 50, 50, 30, 55, 40, 35, 90, 25]
+        }
+    ],
+    xaxis: {
+        categories: ['5k', '10k', '15k', '20k', '25k', '30k', '35k', '40k', '45k', '50k', '55k', '60k']
+    },
+    legend: {
+        position: 'bottom',
+        markers: { width: 12, height: 12 }
+    },
+    fill: {
+        type: 'solid',
+        opacity: 0.6
     }
-  ],
-  xaxis: {
-    categories: ['5k','10k','15k','20k','25k','30k','35k','40k','45k','50k','55k','60k']
-  },
-  legend: {
-    position: 'bottom',
-    markers: { width: 12, height: 12 }
-  },
-  fill: {
-    type: 'solid',
-    opacity: 0.6
-  }
 };
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 
-/*segunda grafica */    
+/*segunda grafica */
 
 var optionsUsuarios = {
     chart: {
@@ -64,7 +64,7 @@ var optionsUsuarios = {
 var chartUsuarios = new ApexCharts(document.querySelector("#chart-usuarios"), optionsUsuarios);
 chartUsuarios.render();
 
-/*tercera grafica */    
+/*tercera grafica */
 
 var optionsMetricas = {
     chart: {
@@ -129,26 +129,73 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleButtons = document.querySelectorAll(".toggle-submenu");
+    const toggleButtons = document.querySelectorAll(".toggle-submenu");
 
-  toggleButtons.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation(); // evita que el click active el enlace padre
-      const parent = btn.closest(".has-submenu");
-      parent.classList.toggle("active");
+    toggleButtons.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation(); // evita que el click active el enlace padre
+            const parent = btn.closest(".has-submenu");
+            parent.classList.toggle("active");
+        });
     });
-  });
 });
 
-new DataTable('#tabla-1', {
-    layout: {
-        topStart: {
-            buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
-        }
-    }
+document.addEventListener("DOMContentLoaded", () => {
+    // Cargar el JSON de servicios
+    fetch("../../../assets/data/servicios.json")
+        .then(res => res.json())
+        .then(data => {
+            // Generar filas HTML dinámicamente
+            const tbody = document.getElementById("tabla-servicios");
+            tbody.innerHTML = data.map(servicio => `
+                <tr>
+                    <td>${servicio.id}</td>
+                    <td>${servicio.usuario}</td>
+                    <td>${servicio.direccion}</td>
+                    <td>${servicio.fecha}</td>
+                    <td>${servicio.servicio}</td>
+                    <td>${servicio.estado}</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary">Ver</button>
+                        <button class="btn btn-sm btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+            `).join("");
+
+            // Inicializar DataTable solo después de tener las filas cargadas
+            new DataTable('#tabla-1', {
+                responsive: true,
+                pageLength: 10,
+                lengthMenu: [5, 10, 25, 50],
+                layout: {
+                    topStart: {
+                        buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+                    }
+                },
+                language: {
+                    search: "Buscar:",
+                    lengthMenu: "Mostrar _MENU_ registros",
+                    info: "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                    infoEmpty: "Mostrando 0 a 0 de 0 registros",
+                    infoFiltered: "(filtrado de _MAX_ registros totales)",
+                    zeroRecords: "No se encontraron resultados",
+                    paginate: {
+                        first: "<<",
+                        previous: "‹",
+                        next: "›",
+                        last: ">>"
+                    },
+                    buttons: {
+                        copy: "Copiar",
+                        csv: "Exportar CSV",
+                        excel: "Exportar Excel",
+                        pdf: "Exportar PDF",
+                        print: "Imprimir"
+                    }
+                }
+            });
+        })
+        .catch(err => console.error("Error al cargar el JSON:", err));
 });
-
-
-
 
 

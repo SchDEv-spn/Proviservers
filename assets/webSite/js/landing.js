@@ -13,36 +13,39 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".navbar .nav-link");
+  const navbarHeight = document.querySelector(".navbar").offsetHeight;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const id = entry.target.getAttribute("id");
-      const navLink = document.querySelector(`.navbar .nav-link[href="#${id}"]`);
-      if (entry.isIntersecting) {
-        navLinks.forEach((link) => link.classList.remove("active"));
-        if (navLink) navLink.classList.add("active");
-      }
-    });
-  }, { threshold: 0.5 }); // Detecta cuando la mitad de la sección está visible
+  function updateActiveLink() {
+    let index = sections.length;
 
-  sections.forEach((section) => observer.observe(section));
-});
+    while (--index && window.scrollY + navbarHeight < sections[index].offsetTop) {}
+    
+    navLinks.forEach((link) => link.classList.remove("active"));
+    const activeLink = document.querySelector(`.navbar .nav-link[href="#${sections[index].id}"]`);
+    if (activeLink) activeLink.classList.add("active");
+  }
 
-document.querySelectorAll('.navbar .nav-link[href^="#"]').forEach(link => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
+  updateActiveLink();
+  window.addEventListener("scroll", updateActiveLink);
+
+  // Scroll suave
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+      if (!target) return;
+
       window.scrollTo({
-        top: target.offsetTop - 70, // ajusta según la altura del navbar
-        behavior: "smooth"
+        top: target.offsetTop - navbarHeight,
+        behavior: "smooth",
       });
-    }
+    });
   });
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll(".hero-carousel img");
